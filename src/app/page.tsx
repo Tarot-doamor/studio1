@@ -184,7 +184,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center my-8">
             <Image
-              src="https://sdmntpreastus.oaiusercontent.com/files/00000000-ff24-61f9-aa93-7a7b1c83cb26/raw?se=2025-08-31T16%3A25%3A08Z&sp=r&sv=2024-08-04&sr=b&scid=fe6c2531-46ad-5a33-991d-b36c1b8393fc&skoid=c156db82-7a33-468f-9cdd-06af263ceec8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-30T19%3A16%3A31Z&ske=2025-08-31T19%3A16%3A31Z&sks=b&skv=2024-08-04&sig=/fmlqa5c3Z46PaPDVly5u3t3m/yQ9sGxVeuPRw2zEc8%3D"
+              src="https://i.postimg.cc/j51mR5Vp/combo-anual-92.png"
               alt="Pack 200 Áudios Livros Best-Sellers"
               width={600}
               height={600}
