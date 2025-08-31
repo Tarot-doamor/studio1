@@ -74,7 +74,7 @@ const topics = [
     description:
       'Estratégias e insights de especialistas para multiplicar seu patrimônio.',
     image:
-      'https://http2.mlstatic.com/D_NQ_NP_2X_909659-MLB84937387056_052025-F.webp',
+      'https://http2.mlstatic.com/D_Q_NP_2X_749403-MLU50632528560_072022-R.webp',
   },
   {
     icon: Target,
@@ -167,7 +167,7 @@ const CTAButton = ({
   >
     <Button
       size="lg"
-      className="w-full text-lg font-bold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow rounded-full animate-pulse"
+      className="w-full text-base md:text-lg font-bold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow rounded-full animate-pulse"
     >
       <Rocket className="mr-2 h-5 w-5" />
       {text}
@@ -313,7 +313,7 @@ export default function Home() {
       <section id="features" className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="text-center">
+            <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Por que escolher nosso{' '}
                 <span className="text-primary">Pack Exclusivo?</span>
