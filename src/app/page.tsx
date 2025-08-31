@@ -490,7 +490,7 @@ export default function Home() {
                 dias
               </div>
             </div>
-            <p className="text-xs text-muted-foreground/70 mt-6 max-w-md">
+            <p className="bg-destructive/80 text-destructive-foreground font-bold p-3 rounded-lg text-sm mt-6 max-w-md">
               ⚠️ ATENÇÃO: Esta é uma oferta limitada para os primeiros 500
               compradores. Após atingirmos este número, o preço voltará ao
               valor normal de R$ 97,00
