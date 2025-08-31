@@ -63,6 +63,8 @@ const topics = [
     title: 'Finanças',
     description:
       'Domine a psicologia do dinheiro e transforme sua relação com as finanças.',
+    image:
+      'https://www.mobills.com.br/blog/wp-content/uploads/2021/01/livro-pai-rico-pai-pobre-robert-kiyosaki-1.jpg',
   },
   {
     icon: LineChart,
@@ -221,7 +223,18 @@ export default function Home() {
                 className="bg-background/50 border-border/50 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all transform hover:-translate-y-2"
               >
                 <CardContent className="p-8">
-                  <topic.icon className="h-12 w-12 text-primary mx-auto mb-6" />
+                  {topic.image ? (
+                    <Image
+                      src={topic.image}
+                      alt={topic.title}
+                      width={150}
+                      height={225}
+                      className="mx-auto mb-6 rounded-md"
+                      data-ai-hint="book cover"
+                    />
+                  ) : (
+                    <topic.icon className="h-12 w-12 text-primary mx-auto mb-6" />
+                  )}
                   <h3 className="text-xl font-bold mb-2">{topic.title}</h3>
                   <p className="text-muted-foreground">{topic.description}</p>
                 </CardContent>
