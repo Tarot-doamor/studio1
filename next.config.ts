@@ -28,6 +28,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'sdmntpreastus.oaiusercontent.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
