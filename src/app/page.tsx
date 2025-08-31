@@ -181,7 +181,7 @@ export default function Home() {
           <div className="flex justify-center mb-6">
             <CTAButton text="Quero meu acesso agora" />
           </div>
-          <p className="text-sm text-green-400 flex items-center justify-center gap-2">
+          <p className="text-sm text-primary flex items-center justify-center gap-2">
             <Sparkles className="h-4 w-4" />
             Acesso imediato após o pagamento
           </p>
@@ -426,7 +426,7 @@ export default function Home() {
       {/* Final CTA Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-yellow-400 font-bold text-2xl">
+          <p className="text-primary font-bold text-2xl">
             ÚLTIMAS VAGAS DISPONÍVEIS!
           </p>
           <h2 className="text-3xl md:text-4xl font-bold mt-2">
