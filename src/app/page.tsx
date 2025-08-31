@@ -81,11 +81,15 @@ const topics = [
     title: 'Carreira',
     description:
       'Aprenda com grandes autores como Stephen Covey e acelere sua carreira.',
+    image:
+      'https://http2.mlstatic.com/D_NQ_NP_2X_772459-MLA84169437134_052025-F.webp',
   },
   {
     icon: BrainCircuit,
     title: 'Mentalidade',
     description: "Molde seu mindset com clássicos como 'Quem Pensa Enriquece'.",
+    image:
+      'https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg',
   },
 ];
 
@@ -410,8 +414,10 @@ export default function Home() {
               <p className="text-muted-foreground max-w-md mx-auto">
                 Se não gostar, devolvemos 100% do seu dinheiro
               </p>
-              <p className="mt-4 text-sm text-yellow-500 font-bold flex items-center justify-center gap-2">
-                ⚠️ Poucas vagas disponíveis — não deixe para depois!
+              <p className="bg-destructive/80 text-destructive-foreground font-bold p-3 rounded-lg text-sm mt-6 max-w-md">
+                ⚠️ ATENÇÃO: Esta é uma oferta limitada para os primeiros 500
+                compradores. Após atingirmos este número, o preço voltará ao
+                valor normal de R$ 97,00
               </p>
             </div>
           </Card>
