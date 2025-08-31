@@ -391,7 +391,7 @@ export default function Home() {
                 sua evolução.
               </p>
               <p className="text-muted-foreground/70 ml-7">
-                 <span className="font-bold text-primary text-lg">GRÁTIS!</span>
+                Valor estimado: R$10.000,00 - <span className="font-bold text-primary text-lg">GRÁTIS!</span>
               </p>
             </Card>
 
