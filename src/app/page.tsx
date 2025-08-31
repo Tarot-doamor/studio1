@@ -462,13 +462,13 @@ export default function Home() {
                 </p>
               </div>
             </Card>
-            <Card className="p-4 bg-primary text-primary-foreground flex items-center gap-4">
-              <div className="p-3 bg-primary-foreground/20 rounded-lg">
-                <Wallet className="h-6 w-6 text-primary-foreground" />
+            <Card className="p-4 bg-secondary flex items-center gap-4">
+              <div className="p-3 bg-primary/10 rounded-lg">
+                <Wallet className="h-6 w-6 text-primary" />
               </div>
               <div className="text-left">
                 <p className="font-bold">Apenas R$ 19,90</p>
-                <p className="text-sm text-primary-foreground/80">
+                <p className="text-sm text-muted-foreground">
                   Preço promocional
                 </p>
               </div>
