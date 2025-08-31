@@ -87,7 +87,7 @@ const topics = [
   {
     icon: BrainCircuit,
     title: 'Mentalidade',
-    description: "Molde seu mindset com clássicos como 'Quem Pensa Enriquece'.",
+    description: "Molde seu mindset com clássicos como Mais Esperto Que O Diabo",
     image:
       'https://http2.mlstatic.com/D_NQ_NP_2X_994547-MLU77440979047_072024-F.webp',
   },
