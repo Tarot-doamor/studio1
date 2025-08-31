@@ -40,7 +40,7 @@ const testimonials = [
   {
     name: 'Marina Santos',
     role: 'Investidora',
-    avatar: 'https://picsum.photos/100/100',
+    avatar: 'https://tse4.mm.bing.net/th/id/OIP.J7zorDHSJjgB3UgA3_56wAHaHa?w=640&h=640&rs=1&pid=ImgDetMain&o=7&rm=3',
     initials: 'MS',
     quote:
       'A clareza que ganhei sobre investimentos foi impressionante. Finalmente entendi como construir um patrimônio sólido e sustentável.',
