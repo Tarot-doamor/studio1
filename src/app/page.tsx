@@ -74,7 +74,7 @@ const topics = [
     description:
       'Estratégias e insights de especialistas para multiplicar seu patrimônio.',
     image:
-      'https://http2.mlstatic.com/D_NQ_NP_2X_772459-MLA84169437134_052025-F.webp',
+      'https://http2.mlstatic.com/D_NQ_NP_2X_909659-MLB84937387056_052025-F.webp',
   },
   {
     icon: Target,
@@ -199,7 +199,7 @@ export default function Home() {
               data-ai-hint="product mockup"
             />
           </div>
-          <div className="flex justify-center mb-6">
+          <div className="flex flex-col items-center mb-6">
             <CTAButton text="Quero meu acesso agora" />
           </div>
           <p className="text-sm text-primary flex items-center justify-center gap-2">
@@ -313,7 +313,7 @@ export default function Home() {
       <section id="features" className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left">
+            <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Por que escolher nosso{' '}
                 <span className="text-primary">Pack Exclusivo?</span>
@@ -324,7 +324,7 @@ export default function Home() {
               </p>
               <div className="space-y-6">
                 {features.map((feature, index) => (
-                  <div key={index} className="flex gap-4 items-center">
+                  <div key={index} className="flex gap-4 items-start md:items-center">
                     <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                       <feature.icon className="h-6 w-6 text-primary" />
                     </div>
@@ -388,16 +388,16 @@ export default function Home() {
               </p>
             </div>
 
-            <Card className="bg-background/50 border-primary/20 max-w-lg mx-auto p-4 my-8 text-left">
-              <p className="font-bold flex items-center gap-2">
+            <Card className="bg-background/50 border-primary/20 max-w-lg mx-auto p-4 my-8 text-center">
+              <p className="font-bold flex items-center justify-center gap-2">
                 <ChevronsRight className="h-5 w-5 text-primary" /> BÔNUS
                 EXCLUSIVO INCLUSO:
               </p>
-              <p className="text-muted-foreground ml-7">
+              <p className="text-muted-foreground mt-2">
                 + 3.500 livros em PDF, best-sellers selecionados para acelerar
                 sua evolução.
               </p>
-              <p className="text-muted-foreground/70 ml-7">
+              <p className="text-muted-foreground/70 mt-1">
                 Valor estimado: R$10.000,00 - <span className="font-bold text-primary text-lg">GRÁTIS!</span>
               </p>
             </Card>
@@ -418,7 +418,7 @@ export default function Home() {
               <p className="text-muted-foreground max-w-md mx-auto">
                 Se não gostar, devolvemos 100% do seu dinheiro
               </p>
-              <p className="bg-destructive/80 text-destructive-foreground font-bold p-3 rounded-lg text-sm mt-6 max-w-md">
+              <p className="bg-destructive/80 text-destructive-foreground font-bold p-3 rounded-lg text-sm mt-6 max-w-md mx-auto">
                 ⚠️ ATENÇÃO: Esta é uma oferta limitada para os primeiros 500
                 compradores. Após atingirmos este número, o preço voltará ao
                 valor normal de R$ 97,00
@@ -481,33 +481,33 @@ export default function Home() {
           </p>
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <Card className="p-4 bg-secondary flex items-center gap-4">
-              <div className="p-3 bg-primary/10 rounded-lg">
+            <Card className="p-4 bg-secondary flex items-center justify-center text-center md:text-left md:justify-start gap-4">
+              <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
                 <BookOpen className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-left">
+              <div>
                 <p className="font-bold">200 Áudios Livros</p>
                 <p className="text-sm text-muted-foreground">
                   Best-sellers completos
                 </p>
               </div>
             </Card>
-            <Card className="p-4 bg-secondary flex items-center gap-4">
-              <div className="p-3 bg-primary/10 rounded-lg">
+            <Card className="p-4 bg-secondary flex items-center justify-center text-center md:text-left md:justify-start gap-4">
+              <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
                 <Library className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-left">
+              <div>
                 <p className="font-bold">3.500 PDFs Bônus</p>
                 <p className="text-sm text-muted-foreground">
                   Biblioteca completa
                 </p>
               </div>
             </Card>
-            <Card className="p-4 bg-secondary flex items-center gap-4">
-              <div className="p-3 bg-primary/10 rounded-lg">
+            <Card className="p-4 bg-secondary flex items-center justify-center text-center md:text-left md:justify-start gap-4">
+              <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
                 <Wallet className="h-6 w-6 text-primary" />
               </div>
-              <div className="text-left">
+              <div>
                 <p className="font-bold">Apenas R$ 19,90</p>
                 <p className="text-sm text-muted-foreground">
                   Preço promocional
@@ -531,7 +531,7 @@ export default function Home() {
                 dias
               </div>
             </div>
-            <p className="bg-destructive/80 text-destructive-foreground font-bold p-3 rounded-lg text-sm mt-6 max-w-md">
+            <p className="bg-destructive/80 text-destructive-foreground font-bold p-3 rounded-lg text-sm mt-6 max-w-md mx-auto">
               ⚠️ ATENÇÃO: Esta é uma oferta limitada para os primeiros 500
                 compradores. Após atingirmos este número, o preço voltará ao
                 valor normal de R$ 97,00
