@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -30,7 +30,9 @@ const testimonials = [
   {
     name: 'Carlos Silva',
     role: 'Empresário',
-    avatar: 'C',
+    avatar:
+      'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfejDgfrvK7OHpDvSy4K1lGcytEmxmBXJQ83h4L0eMABsy1Aix738ivkMfvD_E-mrFaG2iKD98Z54BSnhc7w7LWvCfjSl8M2u-LSQhIcm5S066cyDbE_3qeQgwwOoAcpznxcVfR5y1HWyOOPvpcmSAOYeZ5-2o94EQKHWNvUK25pl9DHCD927PDtoCiw/s1024/image%20(2).jpg',
+    initials: 'CS',
     quote:
       'Estes áudios mudaram completamente minha mentalidade sobre dinheiro. Em 6 meses, consegui triplicar minha renda aplicando os conceitos que aprendi.',
     highlight: 'Triplicou a renda em 6 meses',
@@ -38,7 +40,8 @@ const testimonials = [
   {
     name: 'Marina Santos',
     role: 'Investidora',
-    avatar: 'M',
+    avatar: 'https://picsum.photos/100/100',
+    initials: 'MS',
     quote:
       'A clareza que ganhei sobre investimentos foi impressionante. Finalmente entendi como construir um patrimônio sólido e sustentável.',
     highlight: 'Clareza total sobre investimentos',
@@ -46,7 +49,8 @@ const testimonials = [
   {
     name: 'Roberto Oliveira',
     role: 'Executivo',
-    avatar: 'R',
+    avatar: 'https://picsum.photos/100/100',
+    initials: 'RO',
     quote:
       'Os livros de carreira me ajudaram a conquistar a promoção que eu tanto queria. As estratégias realmente funcionam na prática.',
     highlight: 'Conquistou a promoção desejada',
@@ -255,8 +259,9 @@ export default function Home() {
                 </CardContent>
                 <div className="p-6 pt-0 flex items-center gap-4">
                   <Avatar>
+                    <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
                     <AvatarFallback className="bg-primary text-primary-foreground font-bold">
-                      {testimonial.avatar}
+                      {testimonial.initials}
                     </AvatarFallback>
                   </Avatar>
                   <div>
