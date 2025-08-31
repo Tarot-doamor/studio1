@@ -82,14 +82,14 @@ const topics = [
     description:
       'Aprenda com grandes autores como Stephen Covey e acelere sua carreira.',
     image:
-      'https://http2.mlstatic.com/D_NQ_NP_2X_772459-MLA84169437134_052025-F.webp',
+      'https://http2.mlstatic.com/D_NQ_NP_2X_932872-MLU50456320850_062022-F.webp',
   },
   {
     icon: BrainCircuit,
     title: 'Mentalidade',
     description: "Molde seu mindset com clássicos como 'Quem Pensa Enriquece'.",
     image:
-      'https://m.media-amazon.com/images/I/81bsw6fnUiL._AC_UF1000,1000_QL80_.jpg',
+      'https://http2.mlstatic.com/D_NQ_NP_2X_994547-MLU77440979047_072024-F.webp',
   },
 ];
 
