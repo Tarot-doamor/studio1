@@ -74,7 +74,7 @@ const topics = [
     description:
       'Estratégias e insights de especialistas para multiplicar seu patrimônio.',
     image:
-      'https://http2.mlstatic.com/D_Q_NP_2X_716403-MLB42234520855_062020-R.webp',
+      'https://http2.mlstatic.com/D_Q_NP_2X_749403-MLU50632528560_072022-R.webp',
   },
   {
     icon: Target,
