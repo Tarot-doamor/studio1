@@ -159,13 +159,20 @@ const CTAButton = ({
   className?: string;
   text?: string;
 }) => (
-  <Button
-    size="lg"
-    className={`w-full max-w-md text-lg font-bold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow rounded-full animate-pulse ${className}`}
+  <a
+    href="https://go.disruptybr.com.br/reha66tffy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`w-full max-w-md inline-block ${className}`}
   >
-    <Rocket className="mr-2 h-5 w-5" />
-    {text}
-  </Button>
+    <Button
+      size="lg"
+      className="w-full text-lg font-bold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow rounded-full animate-pulse"
+    >
+      <Rocket className="mr-2 h-5 w-5" />
+      {text}
+    </Button>
+  </a>
 );
 
 export default function Home() {
