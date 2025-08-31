@@ -87,7 +87,7 @@ const topics = [
   {
     icon: BrainCircuit,
     title: 'Mentalidade',
-    description: "Molde seu mindset com clássicos como Mais Esperto Que O Diabo",
+    description: "Molde seu mindset com clássicos como Mais Esperto Que O Diabo.",
     image:
       'https://http2.mlstatic.com/D_NQ_NP_2X_994547-MLU77440979047_072024-F.webp',
   },
@@ -529,8 +529,8 @@ export default function Home() {
             </div>
             <p className="bg-destructive/80 text-destructive-foreground font-bold p-3 rounded-lg text-sm mt-6 max-w-md">
               ⚠️ ATENÇÃO: Esta é uma oferta limitada para os primeiros 500
-              compradores. Após atingirmos este número, o preço voltará ao
-              valor normal de R$ 97,00
+                compradores. Após atingirmos este número, o preço voltará ao
+                valor normal de R$ 97,00
             </p>
           </div>
         </div>
