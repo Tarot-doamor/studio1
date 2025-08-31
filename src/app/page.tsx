@@ -1,252 +1,363 @@
 import Image from 'next/image';
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from '@/components/ui/card';
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
 import {
-  Infinity as InfinityIcon,
-  CloudDownload,
-  Laptop,
-  Tablet,
-  Smartphone,
-  ShieldCheck,
-  BookOpen,
-  LineChart,
-  TrendingUp,
-  Landmark,
   ArrowRight,
+  Award,
+  BookOpen,
+  BrainCircuit,
+  CheckCircle,
+  ChevronsRight,
+  Download,
+  InfinityIcon,
+  Library,
+  LineChart,
+  Lock,
+  Minus,
+  Plus,
+  Rocket,
+  Smartphone,
+  Sparkles,
+  Target,
+  TrendingUp,
+  Wallet,
 } from 'lucide-react';
 
-import { AdCopyGenerator } from '@/components/ad-copy-generator';
-import { Logo } from '@/components/logo';
-
-const benefits = [
-  { icon: InfinityIcon, text: 'Acesso vitalício' },
-  { icon: CloudDownload, text: 'Download ilimitado' },
+const testimonials = [
   {
-    icon: (props: React.ComponentProps<'div'>) => (
-      <div className="flex items-center justify-center gap-1" {...props}>
-        <Laptop className="h-4 w-4" />
-        <Tablet className="h-4 w-4" />
-        <Smartphone className="h-4 w-4" />
-      </div>
-    ),
-    text: 'Acesso em qualquer dispositivo',
+    name: 'Carlos Silva',
+    role: 'Empresário',
+    avatar: 'C',
+    quote:
+      'Estes áudios mudaram completamente minha mentalidade sobre dinheiro. Em 6 meses, consegui triplicar minha renda aplicando os conceitos que aprendi.',
+    highlight: 'Triplicou a renda em 6 meses',
   },
-  { icon: ShieldCheck, text: 'Atualizações garantidas' },
+  {
+    name: 'Marina Santos',
+    role: 'Investidora',
+    avatar: 'M',
+    quote:
+      'A clareza que ganhei sobre investimentos foi impressionante. Finalmente entendi como construir um patrimônio sólido e sustentável.',
+    highlight: 'Clareza total sobre investimentos',
+  },
+  {
+    name: 'Roberto Oliveira',
+    role: 'Executivo',
+    avatar: 'R',
+    quote:
+      'Os livros de carreira me ajudaram a conquistar a promoção que eu tanto queria. As estratégias realmente funcionam na prática.',
+    highlight: 'Conquistou a promoção desejada',
+  },
 ];
 
 const topics = [
   {
-    value: 'financas',
-    label: 'Finanças',
-    icon: Landmark,
-    books: [
-      {
-        title: 'Pai Rico, Pai Pobre',
-        hint: 'book cover rich dad poor dad',
-        img: 'https://picsum.photos/120/180?random=1',
-      },
-      {
-        title: 'Os Segredos da Mente Milionária',
-        hint: 'book cover secrets millionaire mind',
-        img: 'https://picsum.photos/120/180?random=2',
-      },
-      {
-        title: 'Do Mil ao Milhão',
-        hint: 'book cover from thousand to million',
-        img: 'https://picsum.photos/120/180?random=3',
-      },
-    ],
+    icon: Wallet,
+    title: 'Finanças',
+    description:
+      'Domine a psicologia do dinheiro e transforme sua relação com as finanças.',
   },
   {
-    value: 'investimentos',
-    label: 'Investimentos',
     icon: LineChart,
-    books: [
-      {
-        title: 'O Investidor Inteligente',
-        hint: 'book cover the intelligent investor',
-        img: 'https://picsum.photos/120/180?random=4',
-      },
-      {
-        title: 'Ações Comuns, Lucros Incomuns',
-        hint: 'book cover common stocks uncommon profits',
-        img: 'https://picsum.photos/120/180?random=5',
-      },
-      {
-        title: 'Um Passeio Aleatório por Wall Street',
-        hint: 'book cover random walk wall street',
-        img: 'https://picsum.photos/120/180?random=6',
-      },
-    ],
+    title: 'Investimentos',
+    description:
+      'Estratégias e insights de especialistas para multiplicar seu patrimônio.',
   },
   {
-    value: 'carreira',
-    label: 'Carreira',
-    icon: TrendingUp,
-    books: [
-      {
-        title: 'A Coragem de Ser Imperfeito',
-        hint: 'book cover gifts imperfection',
-        img: 'https://picsum.photos/120/180?random=7',
-      },
-      {
-        title: 'Mindset',
-        hint: 'book cover mindset carol dweck',
-        img: 'https://picsum.photos/120/180?random=8',
-      },
-      {
-        title: 'Como Fazer Amigos e Influenciar Pessoas',
-        hint: 'book cover how win friends influence people',
-        img: 'https://picsum.photos/120/180?random=9',
-      },
-    ],
+    icon: Target,
+    title: 'Carreira',
+    description:
+      'Aprenda com grandes autores como Stephen Covey e acelere sua carreira.',
   },
   {
-    value: 'mentalidade',
-    label: 'Mentalidade',
-    icon: BookOpen,
-    books: [
-      {
-        title: 'O Poder do Hábito',
-        hint: 'book cover power habit',
-        img: 'https://picsum.photos/120/180?random=10',
-      },
-      {
-        title: 'Rápido e Devagar',
-        hint: 'book cover thinking fast slow',
-        img: 'https://picsum.photos/120/180?random=11',
-      },
-      {
-        title: 'Os 7 Hábitos das Pessoas Altamente Eficazes',
-        hint: 'book cover 7 habits highly effective people',
-        img: 'https://picsum.photos/120/180?random=12',
-      },
-    ],
+    icon: BrainCircuit,
+    title: 'Mentalidade',
+    description:
+      "Molde seu mindset com clássicos como 'Quem Pensa Enriquece'.",
   },
 ];
 
+const features = [
+  {
+    icon: InfinityIcon,
+    title: 'Acesso Vitalício',
+    description: 'Uma vez seu, será sempre seu. Sem mensalidades ou taxas adicionais.',
+  },
+  {
+    icon: Smartphone,
+    title: 'Compatível com Qualquer Dispositivo',
+    description: 'Ouça no smartphone, tablet, computador ou qualquer player de áudio.',
+  },
+  {
+    icon: Download,
+    title: 'Download Ilimitado',
+    description: 'Baixe todos os áudios e ouça offline, quando e onde quiser.',
+  },
+  {
+    icon: Award,
+    title: 'Atualizações e Bônus Constantes',
+    description: 'Sempre adicionamos novos títulos e bônus exclusivos para nossos membros.',
+  },
+];
+
+const faqItems = [
+    {
+        question: "Como vou receber meu acesso?",
+        answer: "O acesso é imediato após a confirmação do pagamento. Você receberá um e-mail com todas as instruções e o link para acessar a plataforma."
+    },
+    {
+        question: "Posso ler e baixar em qualquer dispositivo?",
+        answer: "Sim! Nossa plataforma é compatível com smartphones, tablets, computadores e qualquer outro dispositivo com acesso à internet. Você pode baixar os áudios e PDFs para ouvir e ler offline."
+    },
+    {
+        question: "Posso comprar depois?",
+        answer: "Esta é uma oferta de lançamento com preço promocional e vagas limitadas. O valor pode voltar ao preço original de R$ 97,00 a qualquer momento. Recomendamos garantir sua vaga o quanto antes."
+    },
+    {
+        question: "Os livros são completos e na íntegra?",
+        answer: "Sim, todos os áudios e livros em PDF são versões completas e íntegras dos best-sellers selecionados."
+    },
+    {
+        question: "Como funciona a garantia?",
+        answer: "Você tem 7 dias de garantia incondicional. Se por qualquer motivo você não ficar satisfeito com o conteúdo, basta nos enviar um e-mail e devolveremos 100% do seu investimento, sem perguntas."
+    },
+    {
+        question: "Preciso pagar mensalidade?",
+        answer: "Não! O pagamento é único. Você paga apenas R$ 19,90 e tem acesso vitalício a todo o material, incluindo futuras atualizações e bônus."
+    }
+]
+
+const CTAButton = ({ className = "" }: { className?: string }) => (
+    <Button size="lg" className={`w-full text-lg font-bold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow rounded-full animate-pulse ${className}`}>
+        <Rocket className="mr-2 h-5 w-5" />
+        GARANTIR MEU ACESSO AGORA - R$ 19,90
+    </Button>
+);
+
+
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-background p-4 sm:p-8 flex items-center justify-center">
-      <Card className="w-full max-w-2xl shadow-2xl rounded-2xl overflow-hidden border-2 border-primary/10">
-        <CardHeader className="text-center bg-primary/5 p-6">
-          <Logo className="mx-auto mb-4" />
-          <h1 className="text-3xl font-bold font-headline text-primary tracking-tight">
-            Desbloqueie seu Potencial Máximo
+    <div className="bg-background text-foreground w-full">
+      {/* Hero Section */}
+      <section className="py-20 md:py-32 text-center bg-gradient-to-b from-background to-secondary">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-4">
+            <span className="text-primary">A Chave</span> para o Seu Próximo Nível
           </h1>
-          <p className="text-foreground/80 mt-2 max-w-md mx-auto">
-            Com 200 Áudios Best-Sellers que transformam mentalidade, finanças e
-            carreira.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+            200 Áudios Livros Best-Sellers que transformam sua mentalidade, aceleram seu crescimento pessoal e impulsionam suas finanças.
           </p>
-        </CardHeader>
-        <CardContent className="p-4 sm:p-6 grid gap-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-            <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-lg group">
-              <Image
-                src="https://picsum.photos/300/400"
-                alt="Think and Grow Rich Book Cover"
-                width={300}
-                height={400}
-                className="object-cover w-full h-full transition-transform group-hover:scale-105"
-                data-ai-hint="book cover think grow rich"
-              />
-              <div className="absolute top-2 left-2">
-                <Badge variant="default" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                  Best-Seller
-                </Badge>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <p className="font-semibold text-lg text-primary">
-                Mais um bônus exclusivo:
-              </p>
-              <h2 className="text-2xl font-bold font-headline">
-                +3.500 livros em PDF
-              </h2>
-              <p className="text-foreground/70">
-                Uma biblioteca completa para acelerar seu desenvolvimento em
-                todas as áreas da vida.
-              </p>
-              <AdCopyGenerator />
-            </div>
+          <div className="flex justify-center mb-6">
+             <CTAButton />
           </div>
-
-          <div className="space-y-4 text-center">
-            <h3 className="font-semibold text-xl text-primary font-headline">
-              Tudo que você recebe:
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-primary/5 text-center"
-                >
-                  <benefit.icon className="h-6 w-6 text-accent" />
-                  <span className="text-xs font-medium text-foreground/80">
-                    {benefit.text}
-                  </span>
-                </div>
-              ))}
-            </div>
+          <p className="text-sm text-green-400 flex items-center justify-center gap-2">
+            <Sparkles className="h-4 w-4" />
+            Acesso imediato após o pagamento
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4 md:gap-8 text-muted-foreground">
+              <div className="flex items-center gap-2"><CheckCircle className="h-5 w-5 text-primary" /> Acesso Vitalício</div>
+              <div className="flex items-center gap-2"><CheckCircle className="h-5 w-5 text-primary" /> Download Ilimitado</div>
+              <div className="flex items-center gap-2"><CheckCircle className="h-5 w-5 text-primary" /> Garantia 7 dias</div>
           </div>
+        </div>
+      </section>
 
-          <div className="space-y-4">
-             <h3 className="font-semibold text-xl text-primary font-headline text-center">
-              Explore os conteúdos
-            </h3>
-            <Tabs defaultValue="financas" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto">
-                {topics.map(topic => (
-                   <TabsTrigger key={topic.value} value={topic.value} className="flex flex-col sm:flex-row gap-2 py-2 data-[state=active]:bg-primary/10 data-[state=active]:text-primary">
-                     <topic.icon className="h-4 w-4" />
-                     <span>{topic.label}</span>
-                   </TabsTrigger>
+      {/* Topics Section */}
+      <section id="topics" className="py-16 md:py-24 bg-secondary">
+        <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Transforme sua vida em 4 áreas essenciais</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-12">Cada áudio livro foi cuidadosamente selecionado para acelerar seu crescimento pessoal e profissional</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {topics.map((topic, index) => (
+                    <Card key={index} className="bg-background/50 border-border/50 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all transform hover:-translate-y-2">
+                        <CardContent className="p-8">
+                            <topic.icon className="h-12 w-12 text-primary mx-auto mb-6" />
+                            <h3 className="text-xl font-bold mb-2">{topic.title}</h3>
+                            <p className="text-muted-foreground">{topic.description}</p>
+                        </CardContent>
+                    </Card>
                 ))}
-              </TabsList>
-              {topics.map(topic => (
-                <TabsContent key={topic.value} value={topic.value}>
-                  <div className="grid grid-cols-3 gap-4 mt-4">
-                    {topic.books.map(book => (
-                       <div key={book.title} className="relative aspect-[2/3] rounded-md overflow-hidden group">
-                         <Image
-                           src={book.img}
-                           alt={book.title}
-                           fill
-                           className="object-cover transition-transform group-hover:scale-110"
-                           data-ai-hint={book.hint}
-                         />
-                       </div>
-                    ))}
+            </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">Veja o que nossos leitores estão dizendo</h2>
+            <p className="text-muted-foreground mt-2">Milhares de pessoas já transformaram suas vidas com nosso pack exclusivo</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="flex flex-col justify-between bg-secondary border-border/50">
+                <CardContent className="p-6">
+                    <p className="text-primary font-semibold flex items-center gap-2 mb-4"><Sparkles className="h-4 w-4" /> {testimonial.highlight}</p>
+                    <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
+                </CardContent>
+                <div className="p-6 pt-0 flex items-center gap-4">
+                  <Avatar>
+                    <AvatarFallback className="bg-primary text-primary-foreground font-bold">{testimonial.avatar}</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                   </div>
-                </TabsContent>
-              ))}
-            </Tabs>
+                </div>
+              </Card>
+            ))}
           </div>
-        </CardContent>
-        <CardFooter className="bg-primary/5 p-6 flex flex-col items-center gap-4 text-center">
-          <div>
-            <span className="text-lg text-destructive line-through">
-              De R$97,00
-            </span>
-            <p className="text-foreground/80">por apenas:</p>
-            <p className="text-5xl font-extrabold text-primary my-1">
-              <span className="text-2xl font-normal align-top">R$</span>
-              19,90
-            </p>
-            <p className="text-foreground/70 text-sm">Pagamento único. Sem mensalidades.</p>
+        </div>
+      </section>
+
+       {/* Features Section */}
+      <section id="features" className="py-16 md:py-24 bg-secondary">
+          <div className="container mx-auto px-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                  <div>
+                      <h2 className="text-3xl md:text-4xl font-bold mb-4">Por que escolher nosso Pack Exclusivo?</h2>
+                      <p className="text-muted-foreground mb-8">Não é apenas uma coleção de áudios, é um investimento no seu futuro.</p>
+                      <div className="space-y-6">
+                          {features.map((feature, index) => (
+                              <div key={index} className="flex gap-4">
+                                  <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+                                      <feature.icon className="h-6 w-6 text-primary" />
+                                  </div>
+                                  <div>
+                                      <h3 className="font-bold text-lg">{feature.title}</h3>
+                                      <p className="text-muted-foreground">{feature.description}</p>
+                                  </div>
+                              </div>
+                          ))}
+                      </div>
+                  </div>
+                   <div className="grid grid-cols-2 gap-4 text-center">
+                        <Card className="p-6 bg-background/50 border-border/50">
+                            <h3 className="text-4xl font-bold text-primary">200+</h3>
+                            <p className="text-muted-foreground mt-2">Áudios Livros Premium</p>
+                        </Card>
+                         <Card className="p-6 bg-background/50 border-border/50">
+                            <h3 className="text-4xl font-bold text-primary">3.500+</h3>
+                            <p className="text-muted-foreground mt-2">Livros PDF Bônus</p>
+                        </Card>
+                        <Card className="p-6 bg-background/50 border-border/50 col-span-2">
+                             <InfinityIcon className="h-10 w-10 text-primary mx-auto mb-2" />
+                             <p className="text-muted-foreground">Valor para Toda Vida</p>
+                        </Card>
+                   </div>
+              </div>
           </div>
-          <Button size="lg" className="w-full text-lg font-bold animate-pulse">
-            EU QUERO ACESSO IMEDIATO <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </CardFooter>
-      </Card>
-    </main>
+      </section>
+
+        {/* Pricing Section */}
+        <section id="pricing" className="py-16 md:py-24 bg-background">
+            <div className="container mx-auto px-4">
+                <Card className="bg-gradient-to-br from-secondary to-background/30 border-primary/20 p-8 md:p-12 text-center shadow-2xl shadow-primary/10">
+                    <p className="text-primary font-bold tracking-widest uppercase">OFERTA IMPERDÍVEL - TEMPO LIMITADO</p>
+                    <h2 className="text-4xl md:text-5xl font-extrabold my-4">Sua Transformação Começa Agora!</h2>
+
+                    <div className="my-8">
+                        <p className="text-muted-foreground">Valor normal dos 200 áudios:</p>
+                        <p className="text-2xl text-muted-foreground/50 line-through">R$ 97,00</p>
+                        <p className="mt-4 text-primary font-semibold">🎯 PREÇO PROMOCIONAL DE LANÇAMENTO:</p>
+                        <p className="text-6xl md:text-8xl font-black text-foreground my-2">R$19,90</p>
+                        <p className="text-primary font-bold">⚡ Economia de mais de R$ 77,00!</p>
+                    </div>
+                    
+                    <Card className="bg-background/50 border-primary/20 max-w-lg mx-auto p-4 my-8 text-left">
+                        <p className="font-bold flex items-center gap-2"><ChevronsRight className="h-5 w-5 text-primary" /> BÔNUS EXCLUSIVO INCLUSO:</p>
+                        <p className="text-muted-foreground ml-7">+ 3.500 livros em PDF, best-sellers selecionados para acelerar sua evolução.</p>
+                        <p className="text-muted-foreground/70 ml-7"><span className="font-bold text-primary">Valor estimado: R$ 150,00</span> - GRÁTIS!</p>
+                    </Card>
+
+                    <div className="max-w-md mx-auto">
+                        <CTAButton />
+                        <p className="text-sm mt-4 text-muted-foreground flex items-center justify-center gap-2">
+                            <Lock className="h-4 w-4" /> Pagamento 100% seguro • Acesso imediato
+                        </p>
+                    </div>
+
+                    <div className="mt-12">
+                        <p className="font-bold text-lg">Garantia Incondicional de 7 Dias</p>
+                        <p className="text-muted-foreground max-w-md mx-auto">Se não gostar, devolvemos 100% do seu dinheiro</p>
+                        <p className="mt-4 text-sm text-yellow-500 font-bold flex items-center justify-center gap-2">⚠️ Poucas vagas disponíveis — não deixe para depois!</p>
+                    </div>
+                </Card>
+            </div>
+        </section>
+
+
+        {/* FAQ Section */}
+        <section id="faq" className="py-16 md:py-24 bg-secondary">
+            <div className="container mx-auto px-4 max-w-3xl">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold">Dúvidas Frequentes</h2>
+                    <p className="text-muted-foreground mt-2">Tudo o que você precisa saber sobre o pack mais completo de áudios livros</p>
+                </div>
+                <Accordion type="single" collapsible className="w-full">
+                    {faqItems.map((item, index) => (
+                        <AccordionItem key={index} value={`item-${index+1}`} className="bg-background/50 border-border/50 rounded-lg mb-2 px-4">
+                            <AccordionTrigger className="text-left font-semibold hover:no-underline">{item.question}</AccordionTrigger>
+                            <AccordionContent className="text-muted-foreground">
+                                {item.answer}
+                            </AccordionContent>
+                        </AccordionItem>
+                    ))}
+                </Accordion>
+                 <p className="text-center text-muted-foreground mt-8">Ainda tem dúvidas? Entre em contato conosco!</p>
+            </div>
+        </section>
+
+        {/* Final CTA Section */}
+        <section className="py-16 bg-background">
+            <div className="container mx-auto px-4 text-center">
+                <p className="text-yellow-400 font-bold text-2xl">ÚLTIMAS VAGAS DISPONÍVEIS!</p>
+                <h2 className="text-3xl md:text-4xl font-bold mt-2">Não perca esta oportunidade única!</h2>
+                <p className="text-red-500 font-semibold mt-4">🚨 Esta oferta especial pode sair do ar a qualquer momento.</p>
+                <p className="text-muted-foreground mb-8">Garante o seu agora e transforme sua vida!</p>
+
+                <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                     <Card className="p-4 bg-secondary flex items-center gap-4">
+                        <div className="p-3 bg-primary/10 rounded-lg"><BookOpen className="h-6 w-6 text-primary" /></div>
+                        <div>
+                            <p className="font-bold">200 Áudios Livros</p>
+                            <p className="text-sm text-muted-foreground">Best-sellers completos</p>
+                        </div>
+                    </Card>
+                     <Card className="p-4 bg-secondary flex items-center gap-4">
+                        <div className="p-3 bg-primary/10 rounded-lg"><Library className="h-6 w-6 text-primary" /></div>
+                        <div>
+                            <p className="font-bold">3.500 PDFs Bônus</p>
+                            <p className="text-sm text-muted-foreground">Biblioteca completa</p>
+                        </div>
+                    </Card>
+                     <Card className="p-4 bg-primary text-primary-foreground flex items-center gap-4">
+                        <div className="p-3 bg-primary-foreground/20 rounded-lg"><Wallet className="h-6 w-6 text-primary-foreground" /></div>
+                        <div>
+                            <p className="font-bold">Apenas R$ 19,90</p>
+                            <p className="text-sm text-primary-foreground/80">Preço promocional</p>
+                        </div>
+                    </Card>
+                </div>
+                
+                <div className="max-w-md mx-auto">
+                    <CTAButton />
+                    <div className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-muted-foreground text-sm">
+                        <div className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Pagamento Seguro</div>
+                        <div className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Acesso Imediato</div>
+                        <div className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-primary" /> Garantia 7 dias</div>
+                    </div>
+                    <p className="text-xs text-muted-foreground/70 mt-6">⚠️ ATENÇÃO: Esta é uma oferta limitada para os primeiros 500 compradores. Após atingirmos este número, o preço voltará ao valor normal de R$ 97,00</p>
+                </div>
+            </div>
+        </section>
+    </div>
   );
 }
