@@ -49,7 +49,7 @@ const testimonials = [
   {
     name: 'Roberto Oliveira',
     role: 'Executivo',
-    avatar: 'https://picsum.photos/100/100',
+    avatar: 'https://tse3.mm.bing.net/th/id/OIP.s-2KS9KyyWmfqrA1nvdgbAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3',
     initials: 'RO',
     quote:
       'Os livros de carreira me ajudaram a conquistar a promoção que eu tanto queria. As estratégias realmente funcionam na prática.',
