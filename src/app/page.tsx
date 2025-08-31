@@ -71,6 +71,8 @@ const topics = [
     title: 'Investimentos',
     description:
       'Estratégias e insights de especialistas para multiplicar seu patrimônio.',
+    image:
+      'https://http2.mlstatic.com/D_NQ_NP_2X_610271-MLA82653058869_022025-F.webp',
   },
   {
     icon: Target,

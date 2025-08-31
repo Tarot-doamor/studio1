@@ -47,7 +47,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'https,
         hostname: 'tse3.mm.bing.net',
         port: '',
         pathname: '/**',
@@ -55,6 +55,12 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'www.mobills.com.br',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'http2.mlstatic.com',
         port: '',
         pathname: '/**',
       }
