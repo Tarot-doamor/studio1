@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   Accordion,
   AccordionContent,
@@ -167,6 +168,16 @@ export default function Home() {
             200 Áudios Livros Best-Sellers que transformam sua mentalidade,
             aceleram seu crescimento pessoal e impulsionam suas finanças.
           </p>
+          <div className="flex justify-center my-8">
+            <Image
+              src="https://firebasestorage.googleapis.com/v0/b/firebase-studio-demos.appspot.com/o/projects%2Fproj_flH2ww%2F51821a4f-a9b0-4a8f-b98a-4402a7b82f7c.jpeg?alt=media&token=e93a61b8-2e06-4407-a068-07e0b5d922c2"
+              alt="Pack 200 Áudios Livros Best-Sellers"
+              width={600}
+              height={600}
+              className="rounded-lg shadow-2xl"
+              data-ai-hint="product mockup"
+            />
+          </div>
           <div className="flex justify-center mb-6">
             <CTAButton text="Quero meu acesso agora" />
           </div>
