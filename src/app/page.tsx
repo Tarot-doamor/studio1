@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import {
   Accordion,
@@ -72,7 +74,7 @@ const topics = [
     description:
       'Estratégias e insights de especialistas para multiplicar seu patrimônio.',
     image:
-      'https://http2.mlstatic.com/D_NQ_NP_2X_909659-MLB84937387056_052025-F.webp',
+      'https://http2.mlstatic.com/D_Q_NP_2X_716403-MLB42234520855_062020-R.webp',
   },
   {
     icon: Target,
@@ -251,7 +253,8 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">
-              Veja o que nossos <span className="text-primary">leitores</span> estão dizendo
+              Veja o que nossos <span className="text-primary">leitores</span>{' '}
+              estão dizendo
             </h2>
             <p className="text-muted-foreground mt-2">
               Milhares de pessoas já transformaram suas vidas com nosso pack
@@ -274,7 +277,10 @@ export default function Home() {
                 </CardContent>
                 <div className="p-6 pt-0 flex items-center gap-4">
                   <Avatar>
-                    <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                    <AvatarImage
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                    />
                     <AvatarFallback className="bg-primary text-primary-foreground font-bold">
                       {testimonial.initials}
                     </AvatarFallback>
@@ -298,7 +304,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Por que escolher nosso <span className="text-primary">Pack Exclusivo?</span>
+                Por que escolher nosso{' '}
+                <span className="text-primary">Pack Exclusivo?</span>
               </h2>
               <p className="text-muted-foreground mb-8">
                 Não é apenas uma coleção de áudios, é um investimento no seu
@@ -348,7 +355,8 @@ export default function Home() {
               OFERTA IMPERDÍVEL - TEMPO LIMITADO
             </p>
             <h2 className="text-4xl md:text-5xl font-extrabold my-4">
-              Sua Transformação <span className="text-primary">Começa Agora!</span>
+              Sua Transformação{' '}
+              <span className="text-primary">Começa Agora!</span>
             </h2>
 
             <div className="my-8">
@@ -396,7 +404,8 @@ export default function Home() {
 
             <div className="mt-12">
               <p className="font-bold text-lg">
-                Garantia Incondicional de <span className="text-primary">7 Dias</span>
+                Garantia Incondicional de{' '}
+                <span className="text-primary">7 Dias</span>
               </p>
               <p className="text-muted-foreground max-w-md mx-auto">
                 Se não gostar, devolvemos 100% do seu dinheiro
@@ -438,7 +447,8 @@ export default function Home() {
             ))}
           </Accordion>
           <p className="text-center text-muted-foreground mt-8">
-            Ainda tem dúvidas? <span className="text-primary">Entre em contato conosco!</span>
+            Ainda tem dúvidas?{' '}
+            <span className="text-primary">Entre em contato conosco!</span>
           </p>
         </div>
       </section>
@@ -450,7 +460,8 @@ export default function Home() {
             ÚLTIMAS VAGAS DISPONÍVEIS!
           </p>
           <h2 className="text-3xl md:text-4xl font-bold mt-2">
-            Não perca esta <span className="text-primary">oportunidade única!</span>
+            Não perca esta{' '}
+            <span className="text-primary">oportunidade única!</span>
           </h2>
           <p className="text-red-500 font-semibold mt-4">
             🚨 Esta oferta especial pode sair do ar a qualquer momento.
