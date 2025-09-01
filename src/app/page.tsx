@@ -200,7 +200,7 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col items-center mb-6">
-            <CTAButton text="COMPRAR AGORA" />
+            <CTAButton text="GARANTIR MEU ACESSO AGORA" />
           </div>
           <p className="text-sm text-primary flex items-center justify-center gap-2">
             <Sparkles className="h-4 w-4" />
@@ -403,7 +403,7 @@ export default function Home() {
             </Card>
 
             <div className="flex flex-col items-center">
-              <CTAButton />
+              <CTAButton text="COMPRAR AGORA"/>
               <p className="text-sm mt-4 text-muted-foreground flex items-center justify-center gap-2">
                 <Lock className="h-4 w-4" /> Pagamento 100% seguro • Acesso
                 imediato
