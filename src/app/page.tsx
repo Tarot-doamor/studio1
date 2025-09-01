@@ -154,7 +154,7 @@ const faqItems = [
 
 const CTAButton = ({
   className = '',
-  text = 'GARANTIR MEU ACESSO AGORA - R$ 19,90',
+  text = 'GARANTIR MEU ACESSO POR R$19,90',
 }: {
   className?: string;
   text?: string;
@@ -200,7 +200,7 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col items-center mb-6">
-            <CTAButton text="Quero meu acesso agora" />
+            <CTAButton text="GARANTIR MEU ACESSO POR R$19,90" />
           </div>
           <p className="text-sm text-primary flex items-center justify-center gap-2">
             <Sparkles className="h-4 w-4" />
@@ -517,7 +517,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center">
-            <CTAButton text="COMPRAR AGORA POR R$ 19,90" />
+            <CTAButton text="GARANTIR MEU ACESSO POR R$19,90" />
             <div className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 text-muted-foreground text-sm">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-primary" /> Pagamento
