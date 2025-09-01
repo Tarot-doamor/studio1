@@ -1,6 +1,8 @@
 'use client';
 
 import Image from 'next/image';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import {
   Accordion,
   AccordionContent,
@@ -175,6 +177,36 @@ const CTAButton = ({
   </a>
 );
 
+const AnimatedFeature = ({ feature, index }: { feature: (typeof features)[0]; index: number }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+
+  const variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      variants={variants}
+      initial="hidden"
+      animate={isInView ? 'visible' : 'hidden'}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      className="flex gap-4 items-start md:items-center"
+    >
+      <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
+        <feature.icon className="h-6 w-6 text-primary" />
+      </div>
+      <div className="text-left">
+        <h3 className="font-bold text-lg">{feature.title}</h3>
+        <p className="text-muted-foreground">{feature.description}</p>
+      </div>
+    </motion.div>
+  );
+};
+
+
 export default function Home() {
   return (
     <div className="bg-background text-foreground w-full">
@@ -324,17 +356,7 @@ export default function Home() {
               </p>
               <div className="space-y-6">
                 {features.map((feature, index) => (
-                  <div key={index} className="flex gap-4 items-start md:items-center">
-                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
-                      <feature.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <div className="text-left">
-                      <h3 className="font-bold text-lg">{feature.title}</h3>
-                      <p className="text-muted-foreground">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
+                  <AnimatedFeature key={index} feature={feature} index={index} />
                 ))}
               </div>
             </div>
