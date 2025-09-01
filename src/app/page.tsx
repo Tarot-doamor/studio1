@@ -74,7 +74,7 @@ const topics = [
     description:
       'Estratégias e insights de especialistas para multiplicar seu patrimônio.',
     image:
-      'https://http2.mlstatic.com/D_Q_NP_2X_749403-MLU50632528560_072022-R.webp',
+      'https://http2.mlstatic.com/D_NQ_NP_2X_772459-MLA84169437134_052025-F.webp',
   },
   {
     icon: Target,
@@ -200,7 +200,7 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col items-center mb-6">
-            <CTAButton text="GARANTIR MEU ACESSO AGORA" />
+            <CTAButton text="COMPRAR AGORA" />
           </div>
           <p className="text-sm text-primary flex items-center justify-center gap-2">
             <Sparkles className="h-4 w-4" />
