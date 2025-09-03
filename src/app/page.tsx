@@ -29,6 +29,7 @@ import {
   Target,
   Wallet,
 } from 'lucide-react';
+import SaleNotification from '@/components/SaleNotification';
 
 const testimonials = [
   {
@@ -193,7 +194,7 @@ const AnimatedFeature = ({ feature, index }: { feature: (typeof features)[0]; in
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className="flex gap-4 items-start md:items-center"
+      className="flex gap-4 items-start"
     >
       <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
         <feature.icon className="h-6 w-6 text-primary" />
@@ -210,6 +211,7 @@ const AnimatedFeature = ({ feature, index }: { feature: (typeof features)[0]; in
 export default function Home() {
   return (
     <div className="bg-background text-foreground w-full">
+      <SaleNotification />
       {/* Hero Section */}
       <section className="py-20 md:py-32 text-center bg-gradient-to-b from-background to-secondary">
         <div className="container mx-auto px-4">
@@ -410,17 +412,14 @@ export default function Home() {
               </p>
             </div>
 
-            <Card className="bg-background/50 border-primary/20 max-w-lg mx-auto p-4 my-8 text-center">
-              <p className="font-bold flex items-center justify-center gap-2">
+            <Card className="bg-background/50 border-primary/20 max-w-lg mx-auto p-4 my-8 text-center md:text-left">
+              <p className="font-bold flex items-center justify-center md:justify-start gap-2">
                 <ChevronsRight className="h-5 w-5 text-primary" /> BÔNUS
                 EXCLUSIVO INCLUSO:
               </p>
               <p className="text-muted-foreground mt-2">
                 + 3.500 livros em PDF, best-sellers selecionados para acelerar
                 sua evolução.
-              </p>
-              <p className="text-muted-foreground/70 mt-1">
-                Valor estimado: R$10.000,00 - <span className="font-bold text-primary text-lg">GRÁTIS!</span>
               </p>
             </Card>
 
@@ -564,3 +563,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
