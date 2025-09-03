@@ -72,7 +72,7 @@ const SaleNotification = () => {
             exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.2 } }}
             className="w-full max-w-xs"
           >
-            <Card className="p-3 bg-success/80 backdrop-blur-lg border-green-500/30 shadow-xl">
+            <Card className="p-3 bg-success/10 backdrop-blur-lg border-green-500/20 shadow-xl">
               <div className="flex items-center gap-3">
                 <div className="p-1.5 bg-primary/10 rounded-full">
                   <ShoppingCart className="h-5 w-5 text-primary" />
