@@ -39,7 +39,7 @@ const SaleNotification = () => {
     setIsVisible(true);
 
     const audio = new Audio('https://cdn.freesound.org/previews/573/573381_6890472-lq.mp3');
-    audio.play();
+    audio.play().catch(() => {});
 
     setTimeout(() => {
       setIsVisible(false);
@@ -72,7 +72,7 @@ const SaleNotification = () => {
             exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.2 } }}
             className="w-full max-w-xs"
           >
-            <Card className="p-3 bg-secondary/80 backdrop-blur-lg border-border/20 shadow-xl">
+            <Card className="p-3 bg-success/80 backdrop-blur-lg border-green-500/30 shadow-xl">
               <div className="flex items-center gap-3">
                 <div className="p-1.5 bg-primary/10 rounded-full">
                   <ShoppingCart className="h-5 w-5 text-primary" />

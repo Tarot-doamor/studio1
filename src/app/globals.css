@@ -30,6 +30,7 @@ body {
     --input: 0 0% 15%;
     --ring: 48 96% 50%;
     --radius: 0.5rem;
+    --success: 142 76% 36%; /* Green for notifications */
   }
 
   .dark {
@@ -52,6 +53,7 @@ body {
     --border: 0 0% 15%;
     --input: 0 0% 15%;
     --ring: 48 96% 50%;
+    --success: 142 76% 36%; /* Green for notifications */
   }
 }
 
