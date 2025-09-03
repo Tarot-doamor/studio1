@@ -67,30 +67,30 @@ const SaleNotification = () => {
             initial={{ opacity: 0, y: 50, scale: 0.3 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.2 } }}
-            className="w-full max-w-sm"
+            className="w-full max-w-xs"
           >
-            <Card className="p-4 bg-secondary/95 backdrop-blur-sm border-border/30 shadow-2xl">
-              <div className="flex items-start gap-4">
-                <div className="p-2 bg-primary/20 rounded-full">
-                  <ShoppingCart className="h-6 w-6 text-primary" />
+            <Card className="p-3 bg-secondary/80 backdrop-blur-lg border-border/20 shadow-xl">
+              <div className="flex items-center gap-3">
+                <div className="p-1.5 bg-primary/10 rounded-full">
+                  <ShoppingCart className="h-5 w-5 text-primary" />
                 </div>
                 <div className="flex-grow">
-                  <p className="font-bold text-sm text-foreground">
+                  <p className="font-bold text-xs text-foreground">
                     Nova compra!
                   </p>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-xs text-muted-foreground">
                     <span className="font-semibold">{currentSale.name}</span> de{' '}
-                    {currentSale.location} acabou de comprar.
+                    {currentSale.location} comprou.
                   </p>
-                  <p className="text-xs text-muted-foreground/80 mt-1">
+                  <p className="text-[10px] text-muted-foreground/70 mt-0.5">
                     {currentTime}
                   </p>
                 </div>
                 <button
                   onClick={() => setIsVisible(false)}
-                  className="p-1 text-muted-foreground hover:text-foreground"
+                  className="p-1 text-muted-foreground hover:text-foreground self-start"
                 >
-                  <X className="h-4 w-4" />
+                  <X className="h-3.5 w-3.5" />
                 </button>
               </div>
             </Card>
