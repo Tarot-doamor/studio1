@@ -18,13 +18,24 @@ const sales = [
   { name: 'Gustavo O.', location: 'Recife, PE' },
 ];
 
+const times = [
+  'há poucos segundos',
+  'há 1 minuto',
+  'há 2 minutos',
+  'há 5 minutos',
+  'há 8 minutos',
+];
+
 const SaleNotification = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSale, setCurrentSale] = useState(sales[0]);
+  const [currentTime, setCurrentTime] = useState(times[0]);
 
   const showRandomNotification = () => {
-    const randomIndex = Math.floor(Math.random() * sales.length);
-    setCurrentSale(sales[randomIndex]);
+    const randomSaleIndex = Math.floor(Math.random() * sales.length);
+    const randomTimeIndex = Math.floor(Math.random() * times.length);
+    setCurrentSale(sales[randomSaleIndex]);
+    setCurrentTime(times[randomTimeIndex]);
     setIsVisible(true);
 
     setTimeout(() => {
@@ -72,7 +83,7 @@ const SaleNotification = () => {
                     {currentSale.location} acabou de comprar.
                   </p>
                   <p className="text-xs text-muted-foreground/80 mt-1">
-                    há poucos segundos
+                    {currentTime}
                   </p>
                 </div>
                 <button
@@ -91,5 +102,3 @@ const SaleNotification = () => {
 };
 
 export default SaleNotification;
-
-    
