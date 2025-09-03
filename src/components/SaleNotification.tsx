@@ -38,6 +38,9 @@ const SaleNotification = () => {
     setCurrentTime(times[randomTimeIndex]);
     setIsVisible(true);
 
+    const audio = new Audio('https://cdn.freesound.org/previews/573/573381_6890472-lq.mp3');
+    audio.play();
+
     setTimeout(() => {
       setIsVisible(false);
     }, 5000); // Fica visível por 5 segundos
