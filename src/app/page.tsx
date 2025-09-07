@@ -285,12 +285,12 @@ export default function LandingPage() {
                     <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> LEGENDAS PARA TODOS OS POSTS</li>
                     <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> DESTAQUES PARA BIO NO INSTAGRAM</li>
                     <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> MODELOS DE PLACA PIX PARA UTILIZAR!</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS 1:</strong> Planilha Administrativa 2.0 – Organização Total!</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS 2:</strong> Estratégia para Redes Sociais – Sucesso Garantido!</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS 3:</strong> Venda Muito com Instagram – Guia Definitivo!</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS 4:</strong> 28 Scripts Prontos para Atendimento no WhatsApp – Comunicação Eficiente!</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS 5:</strong> Checklist para o Atendimento Perfeito – Surpreenda Seus Clientes!</li>
-                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS 6:</strong> Super Planilha para Cadastro e Controle de Clientes – Gerenciamento Simplificado!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>1. BÔNUS:</strong> Planilha Administrativa 2.0 – Organização Total!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>2. BÔNUS:</strong> Estratégia para Redes Sociais – Sucesso Garantido!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>3. BÔNUS:</strong> Venda Muito com Instagram – Guia Definitivo!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>4. BÔNUS:</strong> 28 Scripts Prontos para Atendimento no WhatsApp – Comunicação Eficiente!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>5. BÔNUS:</strong> Checklist para o Atendimento Perfeito – Surpreenda Seus Clientes!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>6. BÔNUS:</strong> Super Planilha para Cadastro e Controle de Clientes – Gerenciamento Simplificado!</li>
                     <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS EXTRA:</strong> Super Surpresa para o Plano Completo – Não Perca!</li>
                   </ul>
                   <Button size="lg" className="w-full animate-pulse py-8 text-2xl font-bold uppercase">
