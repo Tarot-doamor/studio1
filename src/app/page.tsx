@@ -294,7 +294,10 @@ export default function LandingPage() {
                     <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS EXTRA:</strong> Super Surpresa para o Plano Completo – Não Perca!</li>
                   </ul>
                   <Button size="lg" className="w-full animate-pulse py-8 text-2xl font-bold uppercase">
-                    SIM! Quero essa super oferta
+                    <div className="flex flex-col items-center">
+                      <span>SIM! Quero essa</span>
+                      <span className="text-lg font-medium">super oferta</span>
+                    </div>
                   </Button>
                 </CardContent>
               </Card>
@@ -434,5 +437,7 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
 
     
