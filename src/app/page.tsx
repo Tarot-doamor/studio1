@@ -278,15 +278,20 @@ export default function LandingPage() {
                 <CardContent className="flex flex-col items-center">
                   <p className="text-2xl text-muted-foreground">De <span className="line-through">R$97</span> por apenas:</p>
                   <p className="my-4 text-5xl font-extrabold text-primary">R$27</p>
-                  <ul className="my-6 space-y-3 text-muted-foreground">
-                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> <strong>+200 Posts Prontos</strong></li>
-                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> <strong>+100 Stories Engajadores</strong></li>
-                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Legendas para todos os posts</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Destaques para Bio</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Modelos de Placa PIX</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> <strong>6 Bônus Exclusivos</strong></li>
-                     <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Bônus Surpresa</li>
-                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Garantia de 7 dias</li>
+                  <ul className="my-6 space-y-3 text-left text-muted-foreground">
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>PACOTE COMPLETO:</strong></li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> +200 POSTS PRONTOS</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> + 100 STOYS ENGAJADORES</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> LEGENDAS PARA TODOS OS POSTS</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> DESTAQUES PARA BIO NO INSTAGRAM</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> MODELOS DE PLACA PIX PARA UTILIZAR!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS 1:</strong> Planilha Administrativa 2.0 – Organização Total!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS 2:</strong> Estratégia para Redes Sociais – Sucesso Garantido!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS 3:</strong> Venda Muito com Instagram – Guia Definitivo!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS 4:</strong> 28 Scripts Prontos para Atendimento no WhatsApp – Comunicação Eficiente!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS 5:</strong> Checklist para o Atendimento Perfeito – Surpreenda Seus Clientes!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS 6:</strong> Super Planilha para Cadastro e Controle de Clientes – Gerenciamento Simplificado!</li>
+                    <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS EXTRA:</strong> Super Surpresa para o Plano Completo – Não Perca!</li>
                   </ul>
                   <Button size="lg" className="w-full animate-pulse py-8 text-2xl font-bold uppercase">
                     SIM! Quero essa super oferta
