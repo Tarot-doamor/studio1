@@ -212,7 +212,7 @@ export default function LandingPage() {
               <div className="relative z-10 flex w-full flex-col items-center gap-6 md:flex-row">
                 <div className="flex justify-center md:w-1/2 md:justify-end md:pr-12">
                    <HowItWorksIcon>
-                     <Image src="https://i.postimg.cc/tJ2vpNJF/9569863-removebg-preview.png" alt="Website icon" width={60} height={60} data-ai-hint="website icon" />
+                     <Image src="https://i.postimg.cc/QxKyKP6y/vector-web-icon-removebg-preview.png" alt="Website icon" width={60} height={60} data-ai-hint="website icon" />
                    </HowItWorksIcon>
                 </div>
                 <div className="text-center md:w-1/2 md:pl-12 md:text-left">
@@ -451,7 +451,7 @@ export default function LandingPage() {
         <section className="bg-background py-16 md:py-24">
           <div className="container">
             <div className="mx-auto max-w-4xl items-center rounded-lg bg-secondary/30 p-8 md:flex md:gap-8">
-              <Image src="https://i.postimg.cc/s1FNxgyJ/7-DIAS-DE-GARANTIA-610x610-removebg-preview.png" data-ai-hint="satisfaction guarantee badge" alt="Selo de Garantia" width={200} height={200} className="mx-auto mb-6 shrink-0 md:mx-0 md:mb-0" />
+              <Image src="https://i.pinimg.com/originals/3f/02/fa/3f02fae7b7a2147a4fbc73d51b664ff4.png" data-ai-hint="satisfaction guarantee badge" alt="Selo de Garantia" width={200} height={200} className="mx-auto mb-6 shrink-0 md:mx-0 md:mb-0 rounded-full" />
               <div className="text-center md:text-left">
                 <h2 className="text-3xl font-bold">Garantia de 7 Dias! Risco Zero!</h2>
                 <p className="mt-4 text-lg text-muted-foreground">
@@ -509,5 +509,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
