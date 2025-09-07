@@ -112,15 +112,15 @@ export default function LandingPage() {
             <div className="grid grid-cols-1 gap-8 text-center">
               <div className="flex flex-col items-center">
                 <Image src="https://i.postimg.cc/8CMpyjXh/OIP-9-removebg-preview.png" alt="Foguete" width={100} height={100} data-ai-hint="rocket icon" />
-                <h3 className="mt-4 text-lg font-bold text-red-500 uppercase">Profissionalismo</h3>
+                <h3 className="mt-4 text-lg font-bold text-foreground uppercase">Profissionalismo</h3>
               </div>
               <div className="flex flex-col items-center">
                 <Image src="https://i.postimg.cc/ZqHbk1ZR/15062251-icone-de-ampulheta-plano-isolado-vetor-removebg-preview.png" alt="Ampulheta" width={100} height={100} data-ai-hint="hourglass icon" />
-                <h3 className="mt-4 text-lg font-bold text-red-500 uppercase">Economia de Tempo</h3>
+                <h3 className="mt-4 text-lg font-bold text-foreground uppercase">Economia de Tempo</h3>
               </div>
               <div className="flex flex-col items-center">
                 <Image src="https://i.postimg.cc/mkfB7Rym/criativo-65889b64d59b6-Mj-Qv-MTIv-Mj-Ay-My-Ax-N2g1-OA-removebg-preview.png" alt="Saco de Dinheiro" width={100} height={100} data-ai-hint="money bag" />
-                <h3 className="mt-4 text-lg font-bold text-red-500 uppercase">Aumento nas Vendas</h3>
+                <h3 className="mt-4 text-lg font-bold text-foreground uppercase">Aumento nas Vendas</h3>
               </div>
             </div>
           </div>
@@ -445,3 +445,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
