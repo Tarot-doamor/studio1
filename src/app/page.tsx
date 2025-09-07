@@ -108,7 +108,7 @@ export default function LandingPage() {
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="flex flex-col items-center">
-                <Image src="https://i.postimg.cc/tJqT6qBw/rocket-1f680.png" alt="Foguete" width={128} height={128} data-ai-hint="rocket icon" />
+                <Image src="https://i.postimg.cc/8CMpyjXh/OIP-9-removebg-preview.png" alt="Foguete" width={128} height={128} data-ai-hint="rocket icon" />
                 <h3 className="mt-4 text-xl font-bold text-red-500 uppercase">Profissionalismo</h3>
               </div>
               <div className="flex flex-col items-center">
@@ -512,3 +512,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
