@@ -70,32 +70,32 @@ export default function LandingPage() {
               <CarouselContent>
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                    <Image src="https://picsum.photos/400/500?random=1" data-ai-hint="food promotion" alt="Salgados em promoção" width={400} height={500} className="rounded-lg" />
+                    <Image src="https://i.postimg.cc/TYB07bg7/Any-Conv-com-72-768x960.webp" data-ai-hint="food promotion" alt="Salgados em promoção" width={400} height={500} className="rounded-lg" />
                   </div>
                 </CarouselItem>
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                    <Image src="https://picsum.photos/400/500?random=2" data-ai-hint="savory snacks" alt="Variedade de salgados" width={400} height={500} className="rounded-lg" />
+                    <Image src="https://i.postimg.cc/6QMHBpyF/Any-Conv-com-3-2-768x960.webp" data-ai-hint="savory snacks" alt="Variedade de salgados" width={400} height={500} className="rounded-lg" />
                   </div>
                 </CarouselItem>
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                     <Image src="https://picsum.photos/400/500?random=3" data-ai-hint="social media post" alt="Post para rede social de salgaderia" width={400} height={500} className="rounded-lg" />
+                     <Image src="https://i.postimg.cc/fWG8zFRW/Any-Conv-com-5-1-768x960.webp" data-ai-hint="social media post" alt="Post para rede social de salgaderia" width={400} height={500} className="rounded-lg" />
                   </div>
                 </CarouselItem>
                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                    <Image src="https://picsum.photos/400/500?random=4" data-ai-hint="party platter" alt="Bandeja de salgados para festa" width={400} height={500} className="rounded-lg" />
+                    <Image src="https://i.postimg.cc/tgvzLvcj/Any-Conv-com-10-768x960.webp" data-ai-hint="party platter" alt="Bandeja de salgados para festa" width={400} height={500} className="rounded-lg" />
                   </div>
                 </CarouselItem>
                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                    <div className="p-1">
-                     <Image src="https://picsum.photos/400/500?random=5" data-ai-hint="snack combo" alt="Combo de salgados" width={400} height={500} className="rounded-lg" />
+                     <Image src="https://i.postimg.cc/Mpd0QrqQ/Any-Conv-com-31-768x960.webp" data-ai-hint="snack combo" alt="Combo de salgados" width={400} height={500} className="rounded-lg" />
                    </div>
                  </CarouselItem>
                  <CarouselItem className="md:basis-1/2 lg:basis-1/3">
                    <div className="p-1">
-                     <Image src="https://picsum.photos/400/500?random=6" data-ai-hint="delivery promotion" alt="Anúncio de delivery de salgados" width={400} height={500} className="rounded-lg" />
+                     <Image src="https://i.postimg.cc/nLWvdjsV/Any-Conv-com-66-768x960.webp" data-ai-hint="delivery promotion" alt="Anúncio de delivery de salgados" width={400} height={500} className="rounded-lg" />
                    </div>
                  </CarouselItem>
               </CarouselContent>
