@@ -112,7 +112,7 @@ export default function LandingPage() {
                 <h3 className="mt-4 text-xl font-bold text-red-500 uppercase">Profissionalismo</h3>
               </div>
               <div className="flex flex-col items-center">
-                <Image src="https://i.postimg.cc/RVTn3f0z/hourglass-done-23f3.png" alt="Ampulheta" width={128} height={128} data-ai-hint="hourglass icon" />
+                <Image src="https://i.postimg.cc/ZqHbk1ZR/15062251-icone-de-ampulheta-plano-isolado-vetor-removebg-preview.png" alt="Ampulheta" width={128} height={128} data-ai-hint="hourglass icon" />
                 <h3 className="mt-4 text-xl font-bold text-red-500 uppercase">Economia de Tempo</h3>
               </div>
               <div className="flex flex-col items-center">
@@ -512,5 +512,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
