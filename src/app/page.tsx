@@ -123,83 +123,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-
-        {/* What you'll get Section */}
-        <section className="bg-secondary/50 py-16 md:py-24">
-          <div className="container text-center">
-            <h2 className="text-3xl font-bold md:text-4xl">O que Você Vai Receber?</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Um arsenal completo de marketing para sua salgaderia bombar!</p>
-            <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-8 text-left md:grid-cols-2 lg:grid-cols-3">
-              <Card className="bg-background/50">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-lg">
-                    <Tv className="size-8 text-primary" />
-                    +200 Posts para Feed
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Artes prontas e editáveis para você se destacar no Instagram e Facebook.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-background/50">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-lg">
-                    <Award className="size-8 text-primary" />
-                    +100 Stories Criativos
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Modelos para enquetes, caixas de perguntas e promoções para engajar sua audiência.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-background/50">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-lg">
-                    <FileText className="size-8 text-primary" />
-                    Legendas Prontas (Copy e Cola)
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Textos persuasivos para acompanhar seus posts e gerar mais interação.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-background/50">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-lg">
-                    <Star className="size-8 text-primary" />
-                    Capas para Destaques
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Deixe seu perfil com uma aparência profissional e organizada.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-background/50">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-lg">
-                    <ShoppingCart className="size-8 text-primary" />
-                    Cardápios Editáveis
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Modelos de cardápio para WhatsApp e para imprimir.</p>
-                </CardContent>
-              </Card>
-              <Card className="bg-background/50">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 text-lg">
-                    <Users className="size-8 text-primary" />
-                    Cartão de Visita Digital
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Compartilhe seu contato e redes sociais de forma moderna e interativa.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-        
         {/* How it Works Section */}
         <section className="py-16 md:py-24">
           <div className="container">
@@ -277,7 +200,82 @@ export default function LandingPage() {
           </div>
         </section>
 
-
+        {/* What you'll get Section */}
+        <section className="bg-secondary/50 py-16 md:py-24">
+          <div className="container text-center">
+            <h2 className="text-3xl font-bold md:text-4xl">O que Você Vai Receber?</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Um arsenal completo de marketing para sua salgaderia bombar!</p>
+            <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-8 text-left md:grid-cols-2 lg:grid-cols-3">
+              <Card className="bg-background/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <Tv className="size-8 text-primary" />
+                    +200 Posts para Feed
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Artes prontas e editáveis para você se destacar no Instagram e Facebook.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-background/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <Award className="size-8 text-primary" />
+                    +100 Stories Criativos
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Modelos para enquetes, caixas de perguntas e promoções para engajar sua audiência.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-background/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <FileText className="size-8 text-primary" />
+                    Legendas Prontas (Copy e Cola)
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Textos persuasivos para acompanhar seus posts e gerar mais interação.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-background/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <Star className="size-8 text-primary" />
+                    Capas para Destaques
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Deixe seu perfil com uma aparência profissional e organizada.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-background/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <ShoppingCart className="size-8 text-primary" />
+                    Cardápios Editáveis
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Modelos de cardápio para WhatsApp e para imprimir.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-background/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <Users className="size-8 text-primary" />
+                    Cartão de Visita Digital
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Compartilhe seu contato e redes sociais de forma moderna e interativa.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+        
         {/* Bonus Section */}
         <section className="bg-secondary/50 py-16 md:py-24">
           <div className="container text-center">
