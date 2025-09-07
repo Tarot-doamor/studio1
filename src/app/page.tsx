@@ -1,7 +1,7 @@
 
 'use client';
 
-import { CheckCircle, ShieldCheck, Star, Award, Tv, Users, FileText, BarChart2, MessageCircle, ShoppingCart, Smartphone, HelpCircle, FilePlus, CreditCard, Mail, Search } from 'lucide-react';
+import { CheckCircle, ShieldCheck, Star, Award, Tv, Users, FileText, BarChart2, MessageCircle, ShoppingCart, Smartphone, HelpCircle, FilePlus, CreditCard, Mail, Search, Globe } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -155,7 +155,7 @@ export default function LandingPage() {
                 </div>
                 <div className="md:w-1/2 md:pl-12">
                   <HowItWorksIcon>
-                    <Smartphone className="size-10" />
+                    <Globe className="size-10" />
                   </HowItWorksIcon>
                 </div>
               </div>
