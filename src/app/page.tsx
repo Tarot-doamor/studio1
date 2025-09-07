@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Badge } from '@/components/ui/badge';
 
 const HowItWorksIcon = ({ children }: { children: React.ReactNode }) => (
@@ -296,7 +295,7 @@ export default function LandingPage() {
                   <Button size="lg" className="w-full animate-pulse py-8 text-2xl font-bold uppercase">
                     <div className="flex flex-col items-center">
                       <span>SIM! Quero essa</span>
-                      <span className="text-lg font-medium">super oferta</span>
+                      <span className="text-lg font-medium uppercase">SUPER OFERTA</span>
                     </div>
                   </Button>
                 </CardContent>
@@ -437,7 +436,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
-
-    
