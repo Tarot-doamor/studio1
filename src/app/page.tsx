@@ -123,6 +123,16 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* Edit Colors and Texts Section */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container text-center">
+            <h2 className="text-4xl font-extrabold text-red-500 uppercase">Edite as cores e textos</h2>
+            <div className="mt-10 flex justify-center">
+              <Image src="https://i.postimg.cc/Y9B06Jkq/Any-Conv-com-NUTRICAO-INFANTIL-1.webp" data-ai-hint="editable social media posts" alt="Edite as cores e textos" width={800} height={800} className="rounded-lg"/>
+            </div>
+          </div>
+        </section>
+
         {/* How it Works Section */}
         <section className="py-16 md:py-24">
           <div className="container">
@@ -196,16 +206,6 @@ export default function LandingPage() {
                 </div>
               </div>
 
-            </div>
-          </div>
-        </section>
-
-        {/* Edit Colors and Texts Section */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container text-center">
-            <h2 className="text-4xl font-extrabold text-red-500 uppercase">Edite as cores e textos</h2>
-            <div className="mt-10 flex justify-center">
-              <Image src="https://i.postimg.cc/8zGZ6hJt/DALL-E-2024-07-29-21-45-05-Cria-o-de-uma-imagem-para-uma-p-gina-de-vendas-de-um-pacote-de-m-dias-sociais-para-salga.png" data-ai-hint="editable social media posts" alt="Edite as cores e textos" width={800} height={800} className="rounded-lg"/>
             </div>
           </div>
         </section>
