@@ -36,22 +36,8 @@ export default function LandingPage() {
             <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
               Chega de passar horas criando posts! Com nosso pacote, você terá artes prontas e editáveis para transformar suas redes sociais em uma máquina de vendas.
             </p>
-            <div className="mt-10">
-              <Carousel className="mx-auto w-full max-w-4xl">
-                <CarouselContent>
-                  <CarouselItem>
-                    <Image src="https://i.postimg.cc/7LqqyCQG/hero-salgadaria-DG27qde-U.jpg" data-ai-hint="food social media" alt="Exemplo de Post 1" width={1200} height={675} className="rounded-lg" />
-                  </CarouselItem>
-                  <CarouselItem>
-                    <Image src="https://picsum.photos/1200/676" data-ai-hint="savory snacks social media" alt="Exemplo de Post 2" width={1200} height={675} className="rounded-lg" />
-                  </CarouselItem>
-                  <CarouselItem>
-                    <Image src="https://picsum.photos/1200/677" data-ai-hint="food promotion" alt="Exemplo de Post 3" width={1200} height={675} className="rounded-lg" />
-                  </CarouselItem>
-                </CarouselContent>
-                <CarouselPrevious className="left-2" />
-                <CarouselNext className="right-2" />
-              </Carousel>
+            <div className="mt-10 flex justify-center">
+              <Image src="https://i.postimg.cc/7LqqyCQG/hero-salgadaria-DG27qde-U.jpg" data-ai-hint="food social media" alt="Exemplo de Post de Salgadaria" width={1080} height={1080} className="max-w-full rounded-lg shadow-2xl md:max-w-2xl" />
             </div>
             <Button size="lg" className="mt-10 animate-pulse px-16 py-8 text-2xl font-bold uppercase">
               Quero Aumentar Minhas Vendas
@@ -145,7 +131,7 @@ export default function LandingPage() {
             <h2 className="mb-16 text-center text-3xl font-bold md:text-4xl">Como Funciona?</h2>
             <div className="relative flex flex-col items-center gap-12">
               {/* Dashed Line */}
-              <div className="absolute top-12 left-1/2 -ml-px h-full w-0.5 border-l-2 border-dashed border-primary/50 md:block hidden" />
+              <div className="absolute top-12 left-1/2 -ml-px hidden h-full w-0.5 border-l-2 border-dashed border-primary/50 md:block" />
 
               {/* Step 1 */}
               <div className="relative z-10 flex w-full flex-col items-center gap-6 md:flex-row">
@@ -447,4 +433,5 @@ export default function LandingPage() {
     
 
     
+
 
