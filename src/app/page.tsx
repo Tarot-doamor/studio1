@@ -264,7 +264,7 @@ export default function LandingPage() {
               <div className="relative z-10 flex w-full flex-col items-center gap-6 md:flex-row">
                 <div className="flex justify-center md:w-1/2 md:justify-end md:pr-12">
                   <HowItWorksIcon>
-                    <Mail className="size-10" />
+                    <Image src="https://i.postimg.cc/T1Q9bVzQ/OIP-11-removebg-preview.png" alt="Email icon" width={60} height={60} data-ai-hint="email icon" />
                   </HowItWorksIcon>
                 </div>
                 <div className="text-center md:w-1/2 md:pl-12 md:text-left">
