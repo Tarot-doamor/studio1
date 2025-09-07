@@ -1,278 +1,305 @@
 
 'use client';
 
-import { CheckCircle, ShieldCheck, Star } from 'lucide-react';
+import { CheckCircle, ShieldCheck, Star, ChevronRight, Award, Tv, Users, Clock, ShoppingCart, MessageCircle, FileText, BarChart2 } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 export default function LandingPage() {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-background text-foreground">
+    <div className="flex w-full flex-col bg-background text-foreground">
       <main className="flex-1">
+        {/* Header */}
+        <header className="bg-primary py-2 text-center text-sm font-bold text-primary-foreground">
+          OFERTA ESPECIAL POR TEMPO LIMITADO
+        </header>
+
         {/* Hero Section */}
-        <section className="bg-secondary/50 py-20 text-center md:py-32">
+        <section className="bg-background py-16 text-center md:py-24">
           <div className="container">
-            <h2 className="text-xl font-bold uppercase tracking-widest text-primary">
-              Dia 06/09/25 é o último dia para aproveitar esta promoção
-            </h2>
-            <h1 className="mt-4 text-4xl font-extrabold tracking-tight md:text-6xl">
-              +300 Mídias Profissionais prontas para aumentar as vendas da sua Salgaderia!
+            <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl">
+              <span className="text-primary">+300 Mídias</span> Profissionais para sua Salgaderia Vender Mais
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
-              Transforme suas redes sociais com conteúdo visual profissional e aumente o faturamento da sua empresa! Deixe a concorrência para trás e atraia uma chuva de clientes!
+              Chega de passar horas criando posts! Com nosso pacote, você terá artes prontas e editáveis para transformar suas redes sociais em uma máquina de vendas.
             </p>
-            <Button size="lg" className="mt-8 animate-pulse px-12 py-8 text-xl font-bold">
-              Quero meu pacote agora
+            <div className="mt-10">
+              <Carousel className="mx-auto w-full max-w-4xl">
+                <CarouselContent>
+                  <CarouselItem>
+                    <Image src="https://picsum.photos/1200/675" data-ai-hint="food social media" alt="Exemplo de Post 1" width={1200} height={675} className="rounded-lg" />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <Image src="https://picsum.photos/1200/676" data-ai-hint="savory snacks social media" alt="Exemplo de Post 2" width={1200} height={675} className="rounded-lg" />
+                  </CarouselItem>
+                  <CarouselItem>
+                    <Image src="https://picsum.photos/1200/677" data-ai-hint="food promotion" alt="Exemplo de Post 3" width={1200} height={675} className="rounded-lg" />
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
+            </div>
+            <Button size="lg" className="mt-10 animate-pulse px-16 py-8 text-2xl font-bold uppercase">
+              Quero Aumentar Minhas Vendas
             </Button>
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 md:flex-row">
-              <div className="text-center">
-                <p className="text-2xl font-bold text-muted-foreground line-through">De R$97,00</p>
-                <p className="text-5xl font-extrabold text-primary">Por apenas R$10</p>
-              </div>
-              <div className="flex items-center gap-2 rounded-lg border bg-secondary p-4 text-lg font-semibold">
-                <ShieldCheck className="size-8 text-primary" />
-                <span>Garantia de 7 dias | Risco Zero</span>
-              </div>
+            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <ShieldCheck className="size-4 text-green-500" />
+              <span>Compra Segura | Acesso Imediato</span>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* What you'll get Section */}
+        <section className="bg-secondary/50 py-16 md:py-24">
+          <div className="container text-center">
+            <h2 className="text-3xl font-bold md:text-4xl">O que Você Vai Receber?</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Um arsenal completo de marketing para sua salgaderia bombar!</p>
+            <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-8 text-left md:grid-cols-2 lg:grid-cols-3">
+              <Card className="bg-background/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <Tv className="size-8 text-primary" />
+                    +200 Posts para Feed
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Artes prontas e editáveis para você se destacar no Instagram e Facebook.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-background/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <Award className="size-8 text-primary" />
+                    +100 Stories Criativos
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Modelos para enquetes, caixas de perguntas e promoções para engajar sua audiência.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-background/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <FileText className="size-8 text-primary" />
+                    Legendas Prontas (Copy e Cola)
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Textos persuasivos para acompanhar seus posts e gerar mais interação.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-background/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <Star className="size-8 text-primary" />
+                    Capas para Destaques
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Deixe seu perfil com uma aparência profissional e organizada.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-background/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <ShoppingCart className="size-8 text-primary" />
+                    Cardápios Editáveis
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Modelos de cardápio para WhatsApp e para imprimir.</p>
+                </CardContent>
+              </Card>
+              <Card className="bg-background/50">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 text-lg">
+                    <Users className="size-8 text-primary" />
+                    Cartão de Visita Digital
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Compartilhe seu contato e redes sociais de forma moderna e interativa.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Bonus Section */}
         <section className="py-16 md:py-24">
           <div className="container text-center">
-            <h2 className="text-3xl font-bold md:text-4xl">O que você vai receber?</h2>
-            <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-8 text-left md:grid-cols-2">
-              <div className="flex items-start gap-4">
-                <CheckCircle className="mt-1 size-6 shrink-0 text-primary" />
-                <div>
-                  <h3 className="font-bold">+200 posts prontos</h3>
-                  <p className="text-muted-foreground">No novo formato do Instagram para máximo alcance.</p>
-                </div>
+             <h2 className="text-3xl font-bold md:text-4xl">E ainda tem <span className="text-primary">6 Bônus Exclusivos!</span></h2>
+             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Comprando hoje, você leva de graça tudo que precisa para gerenciar e crescer seu negócio.</p>
+             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div className="rounded-lg border bg-secondary/50 p-6">
+                  <BarChart2 className="mx-auto mb-4 size-10 text-primary"/>
+                  <h3 className="font-bold">Planilha de Controle Financeiro</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">Organize suas finanças de forma simples e eficiente.</p>
               </div>
-              <div className="flex items-start gap-4">
-                <CheckCircle className="mt-1 size-6 shrink-0 text-primary" />
-                <div>
-                  <h3 className="font-bold">+100 stories engajadores</h3>
-                  <p className="text-muted-foreground">Para manter sua audiência conectada.</p>
-                </div>
+              <div className="rounded-lg border bg-secondary/50 p-6">
+                  <FileText className="mx-auto mb-4 size-10 text-primary"/>
+                  <h3 className="font-bold">Guia de Estratégia para Redes Sociais</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">Aprenda a planejar seu conteúdo para ter os melhores resultados.</p>
               </div>
-              <div className="flex items-start gap-4">
-                <CheckCircle className="mt-1 size-6 shrink-0 text-primary" />
-                <div>
-                  <h3 className="font-bold">Legendas para todos os posts</h3>
-                  <p className="text-muted-foreground">Textos persuasivos prontos para usar.</p>
-                </div>
+              <div className="rounded-lg border bg-secondary/50 p-6">
+                  <Tv className="mx-auto mb-4 size-10 text-primary"/>
+                  <h3 className="font-bold">Guia Prático do Instagram para Negócios</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">Descubra os segredos para um perfil de sucesso.</p>
               </div>
-              <div className="flex items-start gap-4">
-                <CheckCircle className="mt-1 size-6 shrink-0 text-primary" />
-                <div>
-                  <h3 className="font-bold">+15 destaques para bio</h3>
-                  <p className="text-muted-foreground">Para organizar e profissionalizar seu perfil.</p>
-                </div>
+              <div className="rounded-lg border bg-secondary/50 p-6">
+                  <MessageCircle className="mx-auto mb-4 size-10 text-primary"/>
+                  <h3 className="font-bold">Scripts de Atendimento no WhatsApp</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">Modelos de mensagens para agilizar e profissionalizar seu atendimento.</p>
               </div>
-              <div className="flex items-start gap-4">
-                <CheckCircle className="mt-1 size-6 shrink-0 text-primary" />
-                <div>
-                  <h3 className="font-bold">Modelos de placa PIX</h3>
-                  <p className="text-muted-foreground">Personalizáveis para o seu negócio.</p>
-                </div>
+              <div className="rounded-lg border bg-secondary/50 p-6">
+                  <CheckCircle className="mx-auto mb-4 size-10 text-primary"/>
+                  <h3 className="font-bold">Checklist de Atendimento ao Cliente</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">Garanta um atendimento impecável e fidelize seus clientes.</p>
               </div>
-              <div className="flex items-start gap-4">
-                <CheckCircle className="mt-1 size-6 shrink-0 text-primary" />
-                <div>
-                  <h3 className="font-bold">+6 bônus gratuitos</h3>
-                  <p className="text-muted-foreground">Ferramentas extras para impulsionar seus resultados.</p>
-                </div>
+              <div className="rounded-lg border bg-secondary/50 p-6">
+                  <Users className="mx-auto mb-4 size-10 text-primary"/>
+                  <h3 className="font-bold">Planilha de Cadastro de Clientes</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">Mantenha um registro organizado dos seus clientes para ações de marketing.</p>
               </div>
+             </div>
+          </div>
+        </section>
+
+
+        {/* Call to Action Price Section */}
+        <section className="bg-secondary/50 py-16 md:py-24">
+          <div className="container max-w-4xl rounded-xl bg-background p-8 text-center shadow-2xl shadow-primary/20">
+            <h3 className="font-bold uppercase text-muted-foreground">OFERTA ESPECIAL POR TEMPO LIMITADO</h3>
+            <p className="mt-4 text-2xl text-muted-foreground">De <span className="line-through">R$197,00</span> por apenas:</p>
+            <p className="my-4 text-7xl font-extrabold text-primary">R$27</p>
+            <Button size="lg" className="mt-4 w-full max-w-md animate-pulse py-8 text-2xl font-bold uppercase">
+              Sim! Quero o pacote completo agora!
+            </Button>
+            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <ShieldCheck className="size-4 text-green-500" />
+              <span>Compra Segura | Acesso Imediato via E-mail e WhatsApp</span>
             </div>
-            <p className="mt-8 text-lg text-muted-foreground">Edite as cores e textos facilmente para combinar com a sua marca.</p>
           </div>
         </section>
 
         {/* Testimonials Section */}
-        <section className="bg-secondary/50 py-16 md:py-24">
+        <section className="py-16 md:py-24">
           <div className="container">
-            <h2 className="text-center text-3xl font-bold md:text-4xl">Depoimentos de quem já comprou</h2>
-            <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
-              <Card>
+            <h2 className="text-center text-3xl font-bold md:text-4xl">Quem Comprou e Aprovou</h2>
+            <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <Card className="bg-secondary/50">
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-0.5">
+                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-primary text-primary" />
+                  </div>
+                  <p className="mt-4 text-muted-foreground">&quot;Pacote incrível, entrega super rápida no WhatsApp e no e-mail. As artes são muito profissionais e fáceis de usar. Recomendo demais!&quot;</p>
+                </CardContent>
                 <CardHeader>
                   <div className="flex items-center gap-4">
                     <Image src="https://picsum.photos/40/40" data-ai-hint="male profile" alt="Guilherme Yager" width={40} height={40} className="rounded-full" />
                     <div>
-                      <CardTitle>Guilherme Yager</CardTitle>
-                      <div className="flex items-center gap-0.5">
-                        <Star className="size-4 fill-primary text-primary" />
-                        <Star className="size-4 fill-primary text-primary" />
-                        <Star className="size-4 fill-primary text-primary" />
-                        <Star className="size-4 fill-primary text-primary" />
-                        <Star className="size-4 fill-primary text-primary" />
-                      </div>
+                      <CardTitle className="text-base">Guilherme Yager</CardTitle>
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">&quot;Pacote incrível, entrega super rápida no WhatsApp e no e-mail. As artes são muito profissionais e fáceis de usar. Recomendo demais!&quot;</p>
-                </CardContent>
               </Card>
-              <Card>
+              <Card className="bg-secondary/50">
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-0.5">
+                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-primary text-primary" />
+                  </div>
+                  <p className="mt-4 text-muted-foreground">&quot;As artes são de altíssima qualidade. Meu engajamento aumentou muito depois que comecei a usar o material. Valeu cada centavo.&quot;</p>
+                </CardContent>
                 <CardHeader>
                   <div className="flex items-center gap-4">
                     <Image src="https://picsum.photos/40/41" data-ai-hint="male profile" alt="Marcos Cezzar" width={40} height={40} className="rounded-full" />
                     <div>
-                      <CardTitle>Marcos Cezzar</CardTitle>
-                      <div className="flex items-center gap-0.5">
-                        <Star className="size-4 fill-primary text-primary" />
-                        <Star className="size-4 fill-primary text-primary" />
-                        <Star className="size-4 fill-primary text-primary" />
-                        <Star className="size-4 fill-primary text-primary" />
-                        <Star className="size-4 fill-primary text-primary" />
-                      </div>
+                      <CardTitle className="text-base">Marcos Cezzar</CardTitle>
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">&quot;As artes são de altíssima qualidade. Meu engajamento aumentou muito depois que comecei a usar o material. Valeu cada centavo.&quot;</p>
-                </CardContent>
               </Card>
-              <Card>
+              <Card className="bg-secondary/50">
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-0.5">
+                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-primary text-primary" />
+                  </div>
+                  <p className="mt-4 text-muted-foreground">&quot;Notei um aumento real no interesse e no número de clientes. O pacote é completo e me ajudou a profissionalizar minha divulgação.&quot;</p>
+                </CardContent>
                 <CardHeader>
                   <div className="flex items-center gap-4">
                     <Image src="https://picsum.photos/41/40" data-ai-hint="female profile" alt="Julia Macedo" width={40} height={40} className="rounded-full" />
                     <div>
-                      <CardTitle>Julia Macedo</CardTitle>
-                      <div className="flex items-center gap-0.5">
-                        <Star className="size-4 fill-primary text-primary" />
-                        <Star className="size-4 fill-primary text-primary" />
-                        <Star className="size-4 fill-primary text-primary" />
-                        <Star className="size-4 fill-primary text-primary" />
-                        <Star className="size-4 fill-primary text-primary" />
-                      </div>
+                      <CardTitle className="text-base">Julia Macedo</CardTitle>
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">&quot;Notei um aumento real no interesse e no número de clientes. O pacote é completo e me ajudou a profissionalizar minha divulgação.&quot;</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Advantages Section */}
-        <section className="py-16 md:py-24">
-          <div className="container">
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-              <div className="text-center">
-                <CheckCircle className="mx-auto mb-4 size-12 text-primary" />
-                <h3 className="text-2xl font-bold">Profissionalismo</h3>
-                <p className="mt-2 text-muted-foreground">Transmita mais confiança e credibilidade com um visual profissional.</p>
-              </div>
-              <div className="text-center">
-                <CheckCircle className="mx-auto mb-4 size-12 text-primary" />
-                <h3 className="text-2xl font-bold">Economia de Tempo</h3>
-                <p className="mt-2 text-muted-foreground">Chega de perder horas criando posts. Tenha tudo pronto para postar.</p>
-              </div>
-              <div className="text-center">
-                <CheckCircle className="mx-auto mb-4 size-12 text-primary" />
-                <h3 className="text-2xl font-bold">Aumento nas Vendas</h3>
-                <p className="mt-2 text-muted-foreground">Designs atraentes que geram desejo e convertem seguidores em clientes.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="bg-secondary/50 py-16 md:py-24">
-          <div className="container grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold md:text-4xl">Transforme sua Salgaderia em um Ímã de Clientes</h2>
-              <ul className="space-y-4 text-lg">
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="mt-1 size-6 shrink-0 text-primary" />
-                  <span><strong>Aumente seu faturamento</strong> com uma avalanche de novos pedidos.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="mt-1 size-6 shrink-0 text-primary" />
-                  <span><strong>Deixe a concorrência para trás</strong> com um perfil irresistível.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="mt-1 size-6 shrink-0 text-primary" />
-                  <span><strong>Multiplique seus clientes</strong> e veja sua agenda lotar.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="mt-1 size-6 shrink-0 text-primary" />
-                  <span><strong>Divulgação profissional</strong> pagando um valor simbólico.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle className="mt-1 size-6 shrink-0 text-primary" />
-                  <span>Receba tudo <strong>pronto no seu WhatsApp e e-mail.</strong></span>
-                </li>
-              </ul>
-            </div>
-            <div className="relative h-80 w-full overflow-hidden rounded-lg">
-              <Image src="https://picsum.photos/600/400" data-ai-hint="savory snacks" alt="Salgados deliciosos" fill style={{ objectFit: 'cover' }} />
-            </div>
-          </div>
-        </section>
-
-        {/* Offer Section */}
-        <section className="py-16 md:py-24">
-          <div className="container">
-            <h2 className="mb-10 text-center text-3xl font-bold md:text-4xl">Escolha o Plano Perfeito para Você</h2>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-8 md:grid-cols-2 md:items-start">
-              <Card className="flex flex-col">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">Pacote Básico</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-1 flex-col">
-                  <p className="text-center text-4xl font-bold">R$10</p>
-                  <ul className="mt-6 flex-1 space-y-3 text-muted-foreground">
-                    <li className="flex items-center gap-3"><CheckCircle className="size-5 text-primary" /><span>10 posts</span></li>
-                    <li className="flex items-center gap-3"><CheckCircle className="size-5 text-primary" /><span>5 stories</span></li>
-                    <li className="flex items-center gap-3"><CheckCircle className="size-5 text-primary" /><span>10 legendas</span></li>
-                    <li className="flex items-center gap-3"><CheckCircle className="size-5 text-primary" /><span>Garantia de 7 dias</span></li>
-                  </ul>
-                  <Button variant="outline" size="lg" className="mt-6 w-full text-lg">Quero essa opção!</Button>
-                </CardContent>
-              </Card>
-
-              <Card className="relative flex flex-col border-2 border-primary shadow-2xl shadow-primary/20">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-sm font-bold text-primary-foreground">
-                  MAIS VENDIDO / RECOMENDADO
-                </div>
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl">Pacote Completo</CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-1 flex-col">
-                  <p className="text-center text-4xl font-bold">R$27</p>
-                  <ul className="mt-6 flex-1 space-y-3 text-muted-foreground">
-                    <li className="flex items-center gap-3"><CheckCircle className="size-5 text-primary" /><span>+200 posts prontos</span></li>
-                    <li className="flex items-center gap-3"><CheckCircle className="size-5 text-primary" /><span>+100 stories engajadores</span></li>
-                    <li className="flex items-center gap-3"><CheckCircle className="size-5 text-primary" /><span>Legendas para todos os posts</span></li>
-                    <li className="flex items-center gap-3"><CheckCircle className="size-5 text-primary" /><span>Destaques para bio</span></li>
-                    <li className="flex items-center gap-3"><CheckCircle className="size-5 text-primary" /><span>Modelos de placa PIX</span></li>
-                    <li className="flex items-center gap-3"><CheckCircle className="size-5 text-primary" /><span>6 bônus exclusivos</span></li>
-                     <li className="flex items-center gap-3"><CheckCircle className="size-5 text-primary" /><span>Bônus extra surpresa</span></li>
-                  </ul>
-                  <Button size="lg" className="mt-6 w-full animate-pulse text-lg">SIM! Quero essa super oferta</Button>
-                </CardContent>
               </Card>
             </div>
           </div>
         </section>
 
         {/* Guarantee Section */}
+        <section className="bg-background py-16 md:py-24">
+          <div className="container">
+            <div className="mx-auto max-w-4xl items-center rounded-lg bg-secondary/30 p-8 md:flex md:gap-8">
+              <Image src="https://picsum.photos/200/200" data-ai-hint="satisfaction guarantee badge" alt="Selo de Garantia" width={200} height={200} className="mx-auto mb-6 shrink-0 md:mx-0 md:mb-0" />
+              <div className="text-center md:text-left">
+                <h2 className="text-3xl font-bold">Garantia de 7 Dias! Risco Zero!</h2>
+                <p className="mt-4 text-lg text-muted-foreground">
+                  Sua satisfação é nossa prioridade. Se em até 7 dias você não estiver 100% satisfeito com o pacote de mídias, basta nos enviar um e-mail e nós devolveremos cada centavo do seu investimento, sem perguntas e sem complicação.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
         <section className="bg-secondary/50 py-16 md:py-24">
-          <div className="container text-center">
-            <ShieldCheck className="mx-auto mb-4 size-16 text-primary" />
-            <h2 className="text-3xl font-bold md:text-4xl">Sua Compra com Risco Zero!</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              Sua satisfação é nossa prioridade. Se em até 7 dias você não estiver 100% satisfeito com o pacote de mídias, basta nos enviar um e-mail e nós devolveremos cada centavo do seu investimento, sem perguntas e sem complicação.
-            </p>
-            <Button size="lg" className="mt-8 px-12 py-8 text-xl font-bold">
-              Quero meu pacote com garantia
-            </Button>
+          <div className="container max-w-3xl">
+            <h2 className="text-center text-3xl font-bold md:text-4xl">Perguntas Frequentes</h2>
+            <Accordion type="single" collapsible className="mt-8 w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Como vou receber o acesso?</AccordionTrigger>
+                <AccordionContent>
+                  O acesso é imediato! Após a confirmação do pagamento, você receberá tudo no seu e-mail e também no seu WhatsApp.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Preciso saber editar?</AccordionTrigger>
+                <AccordionContent>
+                  Não precisa ser um expert! As artes são 100% editáveis no Canva gratuito. Você pode editar pelo celular ou computador. Além disso, incluímos tutoriais para te ajudar.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Por quanto tempo terei acesso?</AccordionTrigger>
+                <AccordionContent>
+                  O acesso é vitalício! Você pode baixar e usar os materiais sempre que quiser, sem prazo de validade.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>O pagamento é seguro?</AccordionTrigger>
+                <AccordionContent>
+                  Sim, 100% seguro. O pagamento é processado pela maior plataforma de produtos digitais do Brasil, com criptografia de ponta a ponta.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
       </main>
