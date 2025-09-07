@@ -389,11 +389,11 @@ export default function LandingPage() {
               <Card className="bg-background/50">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-0.5">
-                    <Star className="size-5 fill-primary text-primary" />
-                    <Star className="size-5 fill-primary text-primary" />
-                    <Star className="size-5 fill-primary text-primary" />
-                    <Star className="size-5 fill-primary text-primary" />
-                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
                   </div>
                   <p className="mt-4 text-muted-foreground">&quot;Pacote incrível, entrega super rápida no WhatsApp e no e-mail. As artes são muito profissionais e fáceis de usar. Recomendo demais!&quot;</p>
                 </CardContent>
@@ -409,11 +409,11 @@ export default function LandingPage() {
               <Card className="bg-background/50">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-0.5">
-                    <Star className="size-5 fill-primary text-primary" />
-                    <Star className="size-5 fill-primary text-primary" />
-                    <Star className="size-5 fill-primary text-primary" />
-                    <Star className="size-5 fill-primary text-primary" />
-                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
                   </div>
                   <p className="mt-4 text-muted-foreground">&quot;As artes são de altíssima qualidade. Meu engajamento aumentou muito depois que comecei a usar o material. Valeu cada centavo.&quot;</p>
                 </CardContent>
@@ -429,11 +429,11 @@ export default function LandingPage() {
               <Card className="bg-background/50">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-0.5">
-                    <Star className="size-5 fill-primary text-primary" />
-                    <Star className="size-5 fill-primary text-primary" />
-                    <Star className="size-5 fill-primary text-primary" />
-                    <Star className="size-5 fill-primary text-primary" />
-                    <Star className="size-5 fill-primary text-primary" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
+                    <Star className="size-5 fill-yellow-500 text-yellow-500" />
                   </div>
                   <p className="mt-4 text-muted-foreground">&quot;Notei um aumento real no interesse e no número de clientes. O pacote é completo e me ajudou a profissionalizar minha divulgação.&quot;</p>
                 </CardContent>
