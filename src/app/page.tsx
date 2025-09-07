@@ -23,7 +23,7 @@ export default function LandingPage() {
     <div className="flex w-full flex-col bg-background text-foreground">
       <main className="flex-1">
         {/* Header */}
-        <header className="bg-primary py-2 text-center text-sm font-bold text-primary-foreground">
+        <header className="bg-red-600 py-2 text-center text-sm font-bold text-primary-foreground">
           OFERTA ESPECIAL POR TEMPO LIMITADO
         </header>
 
@@ -429,10 +429,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
-
-    
-
-
-
