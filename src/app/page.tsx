@@ -10,12 +10,6 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Badge } from '@/components/ui/badge';
 
 export default function LandingPage() {
-  const StepIcon = ({ children }: { children: React.ReactNode }) => (
-    <div className="mx-auto flex size-20 items-center justify-center rounded-full border-4 border-primary bg-secondary/50 text-primary md:size-24">
-      {children}
-    </div>
-  );
-
   return (
     <div className="flex w-full flex-col bg-background text-foreground">
       <main className="flex-1">
@@ -133,6 +127,20 @@ export default function LandingPage() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </section>
+
+        {/* How it works Section */}
+        <section className="bg-secondary/50 py-16 md:py-24">
+          <div className="container flex justify-center">
+            <Image
+              src="https://i.postimg.cc/mD3bWqgN/Como-funciona-o-acesso-e-pagamento-do-seu-kit-removebg-preview.png"
+              alt="Como funciona o acesso e pagamento"
+              width={1080}
+              height={1080}
+              className="max-w-full h-auto rounded-lg"
+              data-ai-hint="how it works infographic"
+            />
           </div>
         </section>
 
