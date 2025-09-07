@@ -295,7 +295,7 @@ export default function LandingPage() {
                   <Button size="lg" className="w-full animate-pulse py-8 text-2xl font-bold uppercase">
                     <div className="flex flex-col items-center">
                       <span>SIM! Quero essa</span>
-                      <span className="text-lg font-medium uppercase">SUPER OFERTA</span>
+                      <span className="text-xl font-bold uppercase">SUPER OFERTA</span>
                     </div>
                   </Button>
                 </CardContent>
