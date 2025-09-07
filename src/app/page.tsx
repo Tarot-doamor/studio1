@@ -44,8 +44,8 @@ export default function LandingPage() {
             <div className="mt-10 flex justify-center">
               <Image src="https://i.postimg.cc/7LqqyCQG/hero-salgadaria-DG27qde-U.jpg" data-ai-hint="food social media" alt="Exemplo de Post de Salgadaria" width={1080} height={1080} className="max-w-full rounded-lg shadow-2xl md:max-w-2xl" />
             </div>
-            <Button size="lg" className="mt-10 animate-pulse px-16 py-8 text-2xl font-bold uppercase">
-              Quero Aumentar Minhas Vendas
+            <Button size="lg" className="mt-10 animate-pulse px-8 py-6 text-xl font-bold uppercase md:px-16 md:py-8 md:text-2xl">
+              Eu Preciso Divulgar Minha Empresa
             </Button>
             <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
               <ShieldCheck className="size-4 text-primary" />
