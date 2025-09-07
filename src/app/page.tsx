@@ -195,7 +195,7 @@ export default function LandingPage() {
 
               {/* Pacote Completo */}
               <Card className="relative border-2 border-primary bg-background shadow-2xl shadow-primary/20">
-                <Badge variant="default" className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary px-4 py-1 text-base font-bold">Mais Vendido</Badge>
+                <Badge variant="default" className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary px-4 py-1 text-base font-bold text-primary-foreground">Mais Vendido</Badge>
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl font-bold">Pacote Completo</CardTitle>
                 </CardHeader>
