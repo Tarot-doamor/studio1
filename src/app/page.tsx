@@ -362,12 +362,14 @@ export default function LandingPage() {
                     <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>6. BÔNUS:</strong> Super Planilha para Cadastro e Controle de Clientes – Gerenciamento Simplificado!</li>
                     <li className="flex items-start gap-2"><CheckCircle className="mt-1 size-5 shrink-0 text-primary" /> <strong>BÔNUS EXTRA:</strong> Super Surpresa para o Plano Completo – Não Perca!</li>
                   </ul>
-                  <Button size="lg" className="w-full animate-pulse py-6 text-xl font-bold uppercase">
-                    <div className="flex flex-col items-center">
-                      <span>SIM! Quero essa</span>
-                      <span className="text-lg font-bold uppercase">SUPER OFERTA</span>
-                    </div>
-                  </Button>
+                  <a href="https://go.disruptybr.com.br/lz7guz44br" target="_blank" rel="noopener noreferrer" className="w-full">
+                    <Button size="lg" className="w-full animate-pulse py-6 text-xl font-bold uppercase">
+                      <div className="flex flex-col items-center">
+                        <span>SIM! Quero essa</span>
+                        <span className="text-lg font-bold uppercase">SUPER OFERTA</span>
+                      </div>
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             </div>
