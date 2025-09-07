@@ -1,7 +1,7 @@
 
 'use client';
 
-import { CheckCircle, ShieldCheck, Star, Award, Tv, Users, FileText, BarChart2, MessageCircle, ShoppingCart } from 'lucide-react';
+import { CheckCircle, ShieldCheck, Star, Award, Tv, Users, FileText, BarChart2, MessageCircle, ShoppingCart, Smartphone, HelpCircle, FilePlus, CreditCard, Mail, Search } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,6 +10,12 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Badge } from '@/components/ui/badge';
 
 export default function LandingPage() {
+  const StepIcon = ({ children }: { children: React.ReactNode }) => (
+    <div className="mx-auto flex size-20 items-center justify-center rounded-full border-4 border-primary bg-secondary/50 text-primary md:size-24">
+      {children}
+    </div>
+  );
+
   return (
     <div className="flex w-full flex-col bg-background text-foreground">
       <main className="flex-1">
@@ -130,38 +136,129 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Bonus Section */}
+        {/* How it works Section */}
         <section className="py-16 md:py-24">
+          <div className="container">
+            <h2 className="mb-12 text-center text-3xl font-extrabold uppercase text-red-500 md:text-4xl">Veja como funciona...</h2>
+            <div className="relative">
+              {/* Dashed lines for desktop */}
+              <div className="absolute left-1/2 top-12 hidden h-full w-px -translate-x-1/2 border-l-2 border-dashed border-primary/50 md:block" />
+              <div className="absolute left-1/4 top-1/4 hidden h-px w-1/4 -translate-y-6 border-t-2 border-dashed border-primary/50 md:block" />
+              <div className="absolute right-1/4 top-1/2 hidden h-px w-1/4 -translate-y-6 border-t-2 border-dashed border-primary/50 md:block" />
+              <div className="absolute left-1/4 top-3/4 hidden h-px w-1/4 -translate-y-6 border-t-2 border-dashed border-primary/50 md:block" />
+              
+              <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-y-24">
+                {/* Step 1 */}
+                <div className="relative text-center md:text-right md:pr-20">
+                  <h3 className="text-2xl font-bold">Você acessa nosso site...</h3>
+                  <p className="text-muted-foreground">Navegue e conheça nosso pacote de mídias.</p>
+                  <div className="absolute -right-10 top-1/2 hidden -translate-y-1/2 md:block">
+                     <StepIcon><Search className="size-12" /></StepIcon>
+                  </div>
+                   <div className="mt-4 md:hidden">
+                     <StepIcon><Search className="size-12" /></StepIcon>
+                  </div>
+                </div>
+                 <div />
+
+                {/* Step 2 */}
+                <div />
+                <div className="relative text-center md:text-left md:pl-20">
+                   <h3 className="text-2xl font-bold">Tire suas dúvidas</h3>
+                   <p className="text-muted-foreground">Nossa seção de FAQ está pronta para te ajudar.</p>
+                   <div className="absolute -left-10 top-1/2 hidden -translate-y-1/2 md:block">
+                     <StepIcon><HelpCircle className="size-12" /></StepIcon>
+                   </div>
+                    <div className="mt-4 md:hidden">
+                     <StepIcon><HelpCircle className="size-12" /></StepIcon>
+                  </div>
+                </div>
+
+                {/* Step 3 */}
+                <div className="relative text-center md:text-right md:pr-20">
+                   <h3 className="text-2xl font-bold">Escolha o melhor plano</h3>
+                   <p className="text-muted-foreground">Temos a opção perfeita para sua necessidade.</p>
+                   <div className="absolute -right-10 top-1/2 hidden -translate-y-1/2 md:block">
+                     <StepIcon><FilePlus className="size-12" /></StepIcon>
+                   </div>
+                   <div className="mt-4 md:hidden">
+                     <StepIcon><FilePlus className="size-12" /></StepIcon>
+                  </div>
+                </div>
+                <div />
+
+                 {/* Step 4 */}
+                 <div />
+                 <div className="relative text-center md:text-left md:pl-20">
+                   <h3 className="text-2xl font-bold">Faça o pagamento</h3>
+                   <p className="text-muted-foreground">Ambiente 100% seguro e criptografado.</p>
+                   <div className="absolute -left-10 top-1/2 hidden -translate-y-1/2 md:block">
+                     <StepIcon><CreditCard className="size-12" /></StepIcon>
+                   </div>
+                    <div className="mt-4 md:hidden">
+                     <StepIcon><CreditCard className="size-12" /></StepIcon>
+                  </div>
+                 </div>
+
+                 {/* Step 5 */}
+                 <div className="relative text-center md:text-right md:pr-20">
+                   <h3 className="text-2xl font-bold">Receba rapidamente</h3>
+                   <p className="text-muted-foreground">Acesso imediato no seu e-mail e WhatsApp.</p>
+                   <div className="absolute -right-10 top-1/2 hidden -translate-y-1/2 md:block">
+                    <StepIcon>
+                      <div className="flex items-center justify-center gap-1">
+                        <Mail className="size-10" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M16.75 13.96c.25.25.25.66 0 .91l-1.68 1.68c-.25.25-.66.25-.91 0l-.57-.57c-.25-.25-.25-.66 0-.91l.57-.57c1.09-1.09 2.05-2.05 2.59-2.59.25-.25.66-.25.91 0l.08.08c.25.25.25.66 0 .91l-1 1zm-3.11-3.11c-.25-.25-.66-.25-.91 0l-1.68 1.68c-.25.25-.25.66 0 .91l.57.57c.25.25.66.25.91 0l.57-.57c1.09-1.09 2.05-2.05 2.59-2.59.25-.25.66-.25.91 0l.08.08c.25.25.25.66 0 .91l-1 1c-1.28 1.28-2.32 2.32-3.18 3.18-.25.25-.66.25-.91 0l-1.68-1.68c-.25-.25-.25-.66 0-.91l.57-.57c.25-.25.66-.25.91 0l.57.57c.54-.54 1.5-1.5 2.59-2.59zM12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>
+                      </div>
+                    </StepIcon>
+                   </div>
+                    <div className="mt-4 md:hidden">
+                       <StepIcon>
+                         <div className="flex items-center justify-center gap-1">
+                           <Mail className="size-10" />
+                           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M16.75 13.96c.25.25.25.66 0 .91l-1.68 1.68c-.25.25-.66.25-.91 0l-.57-.57c-.25-.25-.25-.66 0-.91l.57-.57c1.09-1.09 2.05-2.05 2.59-2.59.25-.25.66-.25.91 0l.08.08c.25.25.25.66 0 .91l-1 1zm-3.11-3.11c-.25-.25-.66-.25-.91 0l-1.68 1.68c-.25.25-.25.66 0 .91l.57.57c.25.25.66.25.91 0l.57-.57c1.09-1.09 2.05-2.05 2.59-2.59.25-.25.66-.25.91 0l.08.08c.25.25.25.66 0 .91l-1 1c-1.28 1.28-2.32 2.32-3.18 3.18-.25.25-.66.25-.91 0l-1.68-1.68c-.25-.25-.25-.66 0-.91l.57-.57c.25-.25.66-.25.91 0l.57.57c.54-.54 1.5-1.5 2.59-2.59zM12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>
+                         </div>
+                       </StepIcon>
+                   </div>
+                 </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Bonus Section */}
+        <section className="bg-secondary/50 py-16 md:py-24">
           <div className="container text-center">
              <h2 className="text-3xl font-bold md:text-4xl">E ainda tem <span className="text-primary">6 Bônus Exclusivos!</span></h2>
              <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Comprando hoje, você leva de graça tudo que precisa para gerenciar e crescer seu negócio.</p>
              <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <div className="rounded-lg border bg-secondary/50 p-6">
+              <div className="rounded-lg border bg-background/50 p-6">
                   <BarChart2 className="mx-auto mb-4 size-10 text-primary"/>
                   <h3 className="font-bold">Planilha de Controle Financeiro</h3>
                   <p className="mt-2 text-sm text-muted-foreground">Organize suas finanças de forma simples e eficiente.</p>
               </div>
-              <div className="rounded-lg border bg-secondary/50 p-6">
+              <div className="rounded-lg border bg-background/50 p-6">
                   <FileText className="mx-auto mb-4 size-10 text-primary"/>
                   <h3 className="font-bold">Guia de Estratégia para Redes Sociais</h3>
                   <p className="mt-2 text-sm text-muted-foreground">Aprenda a planejar seu conteúdo para ter os melhores resultados.</p>
               </div>
-              <div className="rounded-lg border bg-secondary/50 p-6">
+              <div className="rounded-lg border bg-background/50 p-6">
                   <Tv className="mx-auto mb-4 size-10 text-primary"/>
                   <h3 className="font-bold">Guia Prático do Instagram para Negócios</h3>
                   <p className="mt-2 text-sm text-muted-foreground">Descubra os segredos para um perfil de sucesso.</p>
               </div>
-              <div className="rounded-lg border bg-secondary/50 p-6">
+              <div className="rounded-lg border bg-background/50 p-6">
                   <MessageCircle className="mx-auto mb-4 size-10 text-primary"/>
                   <h3 className="font-bold">Scripts de Atendimento no WhatsApp</h3>
                   <p className="mt-2 text-sm text-muted-foreground">Modelos de mensagens para agilizar e profissionalizar seu atendimento.</p>
               </div>
-              <div className="rounded-lg border bg-secondary/50 p-6">
+              <div className="rounded-lg border bg-background/50 p-6">
                   <CheckCircle className="mx-auto mb-4 size-10 text-primary"/>
                   <h3 className="font-bold">Checklist de Atendimento ao Cliente</h3>
                   <p className="mt-2 text-sm text-muted-foreground">Garanta um atendimento impecável e fidelize seus clientes.</p>
               </div>
-              <div className="rounded-lg border bg-secondary/50 p-6">
+              <div className="rounded-lg border bg-background/50 p-6">
                   <Users className="mx-auto mb-4 size-10 text-primary"/>
                   <h3 className="font-bold">Planilha de Cadastro de Clientes</h3>
                   <p className="mt-2 text-sm text-muted-foreground">Mantenha um registro organizado dos seus clientes para ações de marketing.</p>
@@ -172,12 +269,12 @@ export default function LandingPage() {
 
 
         {/* Plans Section */}
-        <section className="bg-secondary/50 py-16 md:py-24">
+        <section className="py-16 md:py-24">
           <div className="container">
             <h2 className="text-center text-3xl font-bold md:text-4xl">Escolha a Melhor Oferta Para Você</h2>
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 md:items-start lg:gap-12">
               {/* Pacote Básico */}
-              <Card className="bg-background/70">
+              <Card className="bg-secondary/70">
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl font-bold">Pacote Básico</CardTitle>
                 </CardHeader>
@@ -223,11 +320,11 @@ export default function LandingPage() {
 
 
         {/* Testimonials Section */}
-        <section className="py-16 md:py-24">
+        <section className="bg-secondary/50 py-16 md:py-24">
           <div className="container">
             <h2 className="text-center text-3xl font-bold md:text-4xl">Quem Comprou e Aprovou</h2>
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <Card className="bg-secondary/50">
+              <Card className="bg-background/50">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-0.5">
                     <Star className="size-5 fill-primary text-primary" />
@@ -247,7 +344,7 @@ export default function LandingPage() {
                   </div>
                 </CardHeader>
               </Card>
-              <Card className="bg-secondary/50">
+              <Card className="bg-background/50">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-0.5">
                     <Star className="size-5 fill-primary text-primary" />
@@ -267,7 +364,7 @@ export default function LandingPage() {
                   </div>
                 </CardHeader>
               </Card>
-              <Card className="bg-secondary/50">
+              <Card className="bg-background/50">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-0.5">
                     <Star className="size-5 fill-primary text-primary" />
