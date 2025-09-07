@@ -40,7 +40,7 @@ export default function LandingPage() {
               <Carousel className="mx-auto w-full max-w-4xl">
                 <CarouselContent>
                   <CarouselItem>
-                    <Image src="https://picsum.photos/1200/675" data-ai-hint="food social media" alt="Exemplo de Post 1" width={1200} height={675} className="rounded-lg" />
+                    <Image src="https://i.postimg.cc/7LqqyCQG/hero-salgadaria-DG27qde-U.jpg" data-ai-hint="food social media" alt="Exemplo de Post 1" width={1200} height={675} className="rounded-lg" />
                   </CarouselItem>
                   <CarouselItem>
                     <Image src="https://picsum.photos/1200/676" data-ai-hint="savory snacks social media" alt="Exemplo de Post 2" width={1200} height={675} className="rounded-lg" />
@@ -447,3 +447,4 @@ export default function LandingPage() {
     
 
     
+
