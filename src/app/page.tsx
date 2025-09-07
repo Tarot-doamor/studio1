@@ -206,16 +206,11 @@ export default function LandingPage() {
               <div className="relative z-10 flex w-full flex-col items-center gap-6 md:flex-row md:justify-start">
                 <div className="md:w-1/2 md:pr-12 md:text-right">
                   <h3 className="text-2xl font-bold">5. Receba rapidamente!</h3>
-                  <p className="text-muted-foreground">Acesso imediato no seu e-mail e WhatsApp.</p>
+                  <p className="text-muted-foreground">Acesso imediato no seu e-mail.</p>
                 </div>
                 <div className="md:w-1/2 md:pl-12">
                   <HowItWorksIcon>
-                    <div className="flex items-center gap-2">
-                       <Mail className="size-8" />
-                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="text-green-500">
-                         <path d="M16.6 14.2l-2.8-1.5c-.2-.1-.5.1-.6.3l-1.3 2.5c-1.5-1-2.8-2.2-3.8-3.8l2.5-1.3c.2-.1.4-.4.3-.6L9.4 6.1c-.1-.2-.4-.4-.7-.3l-3 .8C5.4 6.8 5 7.3 5.1 7.7c.3 2.1 1.3 4.1 2.9 5.7 1.6 1.6 3.6 2.6 5.7 2.9.4.1.9-.2 1.1-.6l.8-3c.1-.3-.1-.6-.3-.7zM12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"/>
-                       </svg>
-                    </div>
+                    <Mail className="size-10" />
                   </HowItWorksIcon>
                 </div>
               </div>
@@ -448,5 +443,7 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
 
     
