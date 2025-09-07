@@ -391,66 +391,9 @@ export default function LandingPage() {
           <div className="container">
             <h2 className="text-center text-3xl font-bold md:text-4xl">Quem Comprou e Aprovou</h2>
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <Card className="bg-background/50">
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-0.5">
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                  </div>
-                  <p className="mt-4 text-muted-foreground">&quot;Pacote incrível, entrega super rápida no WhatsApp e no e-mail. As artes são muito profissionais e fáceis de usar. Recomendo demais!&quot;</p>
-                </CardContent>
-                <CardHeader>
-                  <div className="flex items-center gap-4">
-                    <Image src="https://picsum.photos/40/40" data-ai-hint="male profile" alt="Guilherme Yager" width={40} height={40} className="rounded-full" />
-                    <div>
-                      <CardTitle className="text-base">Guilherme Yager</CardTitle>
-                    </div>
-                  </div>
-                </CardHeader>
-              </Card>
-              <Card className="bg-background/50">
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-0.5">
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                  </div>
-                  <p className="mt-4 text-muted-foreground">&quot;As artes são de altíssima qualidade. Meu engajamento aumentou muito depois que comecei a usar o material. Valeu cada centavo.&quot;</p>
-                </CardContent>
-                <CardHeader>
-                  <div className="flex items-center gap-4">
-                    <Image src="https://picsum.photos/40/41" data-ai-hint="male profile" alt="Marcos Cezzar" width={40} height={40} className="rounded-full" />
-                    <div>
-                      <CardTitle className="text-base">Marcos Cezzar</CardTitle>
-                    </div>
-                  </div>
-                </CardHeader>
-              </Card>
-              <Card className="bg-background/50">
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-0.5">
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                    <Star className="size-5 fill-yellow-400 text-yellow-400" />
-                  </div>
-                  <p className="mt-4 text-muted-foreground">&quot;Notei um aumento real no interesse e no número de clientes. O pacote é completo e me ajudou a profissionalizar minha divulgação.&quot;</p>
-                </CardContent>
-                <CardHeader>
-                  <div className="flex items-center gap-4">
-                    <Image src="https://picsum.photos/41/40" data-ai-hint="female profile" alt="Julia Macedo" width={40} height={40} className="rounded-full" />
-                    <div>
-                      <CardTitle className="text-base">Julia Macedo</CardTitle>
-                    </div>
-                  </div>
-                </CardHeader>
-              </Card>
+              <Image src="https://i.postimg.cc/BZY8y7BN/Any-Conv-com-1-3.webp" alt="Depoimento de cliente 1" width={400} height={400} className="rounded-lg mx-auto" data-ai-hint="customer testimonial" />
+              <Image src="https://i.postimg.cc/265k7mMY/Any-Conv-com-2-2.webp" alt="Depoimento de cliente 2" width={400} height={400} className="rounded-lg mx-auto" data-ai-hint="customer feedback" />
+              <Image src="https://i.postimg.cc/HncTFzTP/Any-Conv-com-3-3.webp" alt="Depoimento de cliente 3" width={400} height={400} className="rounded-lg mx-auto" data-ai-hint="client review" />
             </div>
           </div>
         </section>
