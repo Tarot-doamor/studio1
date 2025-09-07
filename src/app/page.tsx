@@ -9,6 +9,15 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Badge } from '@/components/ui/badge';
 
+const HowItWorksIcon = ({ children }: { children: React.ReactNode }) => (
+  <div className="relative flex size-24 items-center justify-center rounded-full bg-primary/10 text-primary">
+    <div className="flex size-20 items-center justify-center rounded-full bg-primary/20">
+      {children}
+    </div>
+  </div>
+);
+
+
 export default function LandingPage() {
   return (
     <div className="flex w-full flex-col bg-background text-foreground">
@@ -129,20 +138,92 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+        
+        {/* How it Works Section */}
+        <section className="py-16 md:py-24">
+          <div className="container">
+            <h2 className="mb-16 text-center text-3xl font-bold md:text-4xl">Como Funciona?</h2>
+            <div className="relative flex flex-col items-center gap-12">
+              {/* Dashed Line */}
+              <div className="absolute top-12 left-1/2 -ml-px h-full w-0.5 border-l-2 border-dashed border-primary/50 md:block hidden" />
 
-        {/* How it works Section */}
-        <section className="bg-secondary/50 py-16 md:py-24">
-          <div className="container flex justify-center">
-            <Image
-              src="https://i.postimg.cc/mD3bWqgN/Como-funciona-o-acesso-e-pagamento-do-seu-kit-removebg-preview.png"
-              alt="Como funciona o acesso e pagamento"
-              width={1080}
-              height={1080}
-              className="max-w-full h-auto rounded-lg"
-              data-ai-hint="how it works infographic"
-            />
+              {/* Step 1 */}
+              <div className="relative z-10 flex w-full flex-col items-center gap-6 md:flex-row md:justify-start">
+                <div className="md:w-1/2 md:pr-12 md:text-right">
+                  <h3 className="text-2xl font-bold">1. Você acessa nosso site...</h3>
+                  <p className="text-muted-foreground">Navegue e conheça nosso pacote de mídias.</p>
+                </div>
+                <div className="md:w-1/2 md:pl-12">
+                  <HowItWorksIcon>
+                    <Smartphone className="size-10" />
+                  </HowItWorksIcon>
+                </div>
+              </div>
+              
+              {/* Step 2 */}
+              <div className="relative z-10 flex w-full flex-col-reverse items-center gap-6 md:flex-row md:justify-start">
+                 <div className="md:w-1/2 md:pr-12">
+                   <HowItWorksIcon>
+                     <HelpCircle className="size-10" />
+                   </HowItWorksIcon>
+                 </div>
+                 <div className="md:w-1/2 md:pl-12 md:text-left">
+                   <h3 className="text-2xl font-bold">2. Tire suas dúvidas</h3>
+                   <p className="text-muted-foreground">Nossa equipe está pronta para te ajudar no que for preciso.</p>
+                 </div>
+               </div>
+
+              {/* Step 3 */}
+              <div className="relative z-10 flex w-full flex-col items-center gap-6 md:flex-row md:justify-start">
+                <div className="md:w-1/2 md:pr-12 md:text-right">
+                  <h3 className="text-2xl font-bold">3. Escolha o melhor plano</h3>
+                  <p className="text-muted-foreground">Selecione a oferta que mais se encaixa na sua necessidade.</p>
+                </div>
+                <div className="md:w-1/2 md:pl-12">
+                  <HowItWorksIcon>
+                    <FileText className="size-10" />
+                  </HowItWorksIcon>
+                </div>
+              </div>
+
+              {/* Step 4 */}
+               <div className="relative z-10 flex w-full flex-col-reverse items-center gap-6 md:flex-row md:justify-start">
+                 <div className="md:w-1/2 md:pr-12">
+                  <HowItWorksIcon>
+                    <div className="relative flex size-12 items-center justify-center">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.16"/></svg>
+                       <CheckCircle className="absolute -right-2 -top-2 size-6 fill-green-500 text-background" />
+                    </div>
+                  </HowItWorksIcon>
+                 </div>
+                 <div className="md:w-1/2 md:pl-12 md:text-left">
+                   <h3 className="text-2xl font-bold">4. Faça o pagamento</h3>
+                   <p className="text-muted-foreground">Pagamento 100% seguro em um ambiente criptografado.</p>
+                 </div>
+               </div>
+              
+              {/* Step 5 */}
+              <div className="relative z-10 flex w-full flex-col items-center gap-6 md:flex-row md:justify-start">
+                <div className="md:w-1/2 md:pr-12 md:text-right">
+                  <h3 className="text-2xl font-bold">5. Receba rapidamente!</h3>
+                  <p className="text-muted-foreground">Acesso imediato no seu e-mail e WhatsApp.</p>
+                </div>
+                <div className="md:w-1/2 md:pl-12">
+                  <HowItWorksIcon>
+                    <div className="flex items-center gap-2">
+                       <Mail className="size-8" />
+                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" className="text-green-500">
+                         <path d="M16.6 14.2l-2.8-1.5c-.2-.1-.5.1-.6.3l-1.3 2.5c-1.5-1-2.8-2.2-3.8-3.8l2.5-1.3c.2-.1.4-.4.3-.6L9.4 6.1c-.1-.2-.4-.4-.7-.3l-3 .8C5.4 6.8 5 7.3 5.1 7.7c.3 2.1 1.3 4.1 2.9 5.7 1.6 1.6 3.6 2.6 5.7 2.9.4.1.9-.2 1.1-.6l.8-3c.1-.3-.1-.6-.3-.7zM12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"/>
+                       </svg>
+                    </div>
+                  </HowItWorksIcon>
+                </div>
+              </div>
+
+            </div>
           </div>
         </section>
+
 
         {/* Bonus Section */}
         <section className="bg-secondary/50 py-16 md:py-24">
@@ -367,3 +448,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
