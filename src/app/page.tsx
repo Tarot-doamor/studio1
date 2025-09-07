@@ -332,7 +332,9 @@ export default function LandingPage() {
                     <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> 10 Legendas</li>
                     <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Garantia de 7 dias</li>
                   </ul>
-                  <Button className="w-full bg-primary hover:bg-primary/90">Quero essa opção!</Button>
+                  <a href="https://upsaldagos.netlify.app/" target="_blank" rel="noopener noreferrer" className="w-full">
+                    <Button className="w-full bg-primary hover:bg-primary/90">Quero essa opção!</Button>
+                  </a>
                 </CardContent>
               </Card>
 
@@ -447,5 +449,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
