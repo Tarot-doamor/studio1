@@ -276,7 +276,7 @@ export default function LandingPage() {
                   <CardTitle className="text-2xl font-bold">Pacote Completo</CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-col items-center">
-                  <p className="text-2xl text-muted-foreground">De <span className="line-through">R$197,00</span> por apenas:</p>
+                  <p className="text-2xl text-muted-foreground">De <span className="line-through">R$97</span> por apenas:</p>
                   <p className="my-4 text-5xl font-extrabold text-primary">R$27</p>
                   <ul className="my-6 space-y-3 text-muted-foreground">
                     <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> <strong>+200 Posts Prontos</strong></li>
@@ -433,5 +433,6 @@ export default function LandingPage() {
     
 
     
+
 
 
