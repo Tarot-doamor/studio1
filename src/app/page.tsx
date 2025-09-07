@@ -44,12 +44,14 @@ export default function LandingPage() {
             <div className="mt-8 flex justify-center">
               <Image src="https://i.postimg.cc/7LqqyCQG/hero-salgadaria-DG27qde-U.jpg" data-ai-hint="food social media" alt="Exemplo de Post de Salgadaria" width={1080} height={1080} className="w-full max-w-sm rounded-lg shadow-2xl" />
             </div>
-            <Button size="lg" className="mt-8 w-full max-w-sm animate-pulse px-6 py-6 text-lg font-bold uppercase">
-              <div className="flex flex-col items-center">
-                <span>Eu preciso</span>
-                <span className="text-base font-bold uppercase">Divulgar minha empresa</span>
-              </div>
-            </Button>
+            <a href="#oferta-principal">
+              <Button size="lg" className="mt-8 w-full max-w-sm animate-pulse px-6 py-6 text-lg font-bold uppercase">
+                <div className="flex flex-col items-center">
+                  <span>Eu preciso</span>
+                  <span className="text-base font-bold uppercase">Divulgar minha empresa</span>
+                </div>
+              </Button>
+            </a>
             <div className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
               <ShieldCheck className="size-4 text-primary" />
               <span>Compra Segura | Acesso Imediato</span>
@@ -313,7 +315,7 @@ export default function LandingPage() {
 
 
         {/* Plans Section */}
-        <section className="py-12">
+        <section id="oferta-principal" className="py-12">
           <div className="container">
             <h2 className="text-center text-3xl font-bold">Escolha a Melhor Oferta Para Você</h2>
             <div className="mt-10 grid grid-cols-1 gap-8">
