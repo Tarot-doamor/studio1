@@ -103,6 +103,26 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* Benefits Section */}
+        <section className="py-12 bg-background">
+          <div className="container">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="flex flex-col items-center">
+                <Image src="https://i.postimg.cc/tJqT6qBw/rocket-1f680.png" alt="Foguete" width={128} height={128} data-ai-hint="rocket icon" />
+                <h3 className="mt-4 text-xl font-bold text-red-500 uppercase">Profissionalismo</h3>
+              </div>
+              <div className="flex flex-col items-center">
+                <Image src="https://i.postimg.cc/RVTn3f0z/hourglass-done-23f3.png" alt="Ampulheta" width={128} height={128} data-ai-hint="hourglass icon" />
+                <h3 className="mt-4 text-xl font-bold text-red-500 uppercase">Economia de Tempo</h3>
+              </div>
+              <div className="flex flex-col items-center">
+                <Image src="https://i.postimg.cc/8cMMPcgs/money-bag-1f4b0.png" alt="Saco de Dinheiro" width={128} height={128} data-ai-hint="money bag" />
+                <h3 className="mt-4 text-xl font-bold text-red-500 uppercase">Aumento nas Vendas</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         {/* What you'll get Section */}
         <section className="bg-secondary/50 py-16 md:py-24">
@@ -320,7 +340,7 @@ export default function LandingPage() {
                     <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> 10 Legendas</li>
                     <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Garantia de 7 dias</li>
                   </ul>
-                  <Button className="w-full">Quero essa opção!</Button>
+                  <Button className="w-full bg-primary hover:bg-primary/90">Quero essa opção!</Button>
                 </CardContent>
               </Card>
 
