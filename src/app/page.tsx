@@ -7,6 +7,9 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import Autoplay from "embla-carousel-autoplay";
+import * as React from 'react';
 
 const HowItWorksIcon = ({ children }: { children: React.ReactNode }) => (
   <div className="relative flex size-24 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -18,6 +21,9 @@ const HowItWorksIcon = ({ children }: { children: React.ReactNode }) => (
 
 
 export default function LandingPage() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
   return (
     <div className="flex w-full flex-col bg-background text-foreground">
       <main className="flex-1">
@@ -47,6 +53,56 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+        {/* Image Carousel Section */}
+        <section className="py-12">
+          <div className="container">
+            <Carousel
+              plugins={[plugin.current]}
+              className="w-full"
+              onMouseEnter={plugin.current.stop}
+              onMouseLeave={plugin.current.reset}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+            >
+              <CarouselContent>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Image src="https://picsum.photos/400/500?random=1" data-ai-hint="food promotion" alt="Salgados em promoção" width={400} height={500} className="rounded-lg" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Image src="https://picsum.photos/400/500?random=2" data-ai-hint="savory snacks" alt="Variedade de salgados" width={400} height={500} className="rounded-lg" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                     <Image src="https://picsum.photos/400/500?random=3" data-ai-hint="social media post" alt="Post para rede social de salgaderia" width={400} height={500} className="rounded-lg" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Image src="https://picsum.photos/400/500?random=4" data-ai-hint="party platter" alt="Bandeja de salgados para festa" width={400} height={500} className="rounded-lg" />
+                  </div>
+                </CarouselItem>
+                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                   <div className="p-1">
+                     <Image src="https://picsum.photos/400/500?random=5" data-ai-hint="snack combo" alt="Combo de salgados" width={400} height={500} className="rounded-lg" />
+                   </div>
+                 </CarouselItem>
+                 <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                   <div className="p-1">
+                     <Image src="https://picsum.photos/400/500?random=6" data-ai-hint="delivery promotion" alt="Anúncio de delivery de salgados" width={400} height={500} className="rounded-lg" />
+                   </div>
+                 </CarouselItem>
+              </CarouselContent>
+            </Carousel>
+          </div>
+        </section>
+
 
         {/* What you'll get Section */}
         <section className="bg-secondary/50 py-16 md:py-24">
