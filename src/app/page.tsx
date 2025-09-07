@@ -45,7 +45,10 @@ export default function LandingPage() {
               <Image src="https://i.postimg.cc/7LqqyCQG/hero-salgadaria-DG27qde-U.jpg" data-ai-hint="food social media" alt="Exemplo de Post de Salgadaria" width={1080} height={1080} className="w-full max-w-sm rounded-lg shadow-2xl" />
             </div>
             <Button size="lg" className="mt-8 w-full max-w-sm animate-pulse px-6 py-6 text-lg font-bold uppercase">
-              Eu Preciso Divulgar Minha Empresa
+              <div className="flex flex-col items-center">
+                <span>Eu preciso</span>
+                <span className="text-base font-bold uppercase">Divulgar minha empresa</span>
+              </div>
             </Button>
             <div className="mt-4 flex items-center justify-center gap-2 text-xs text-muted-foreground">
               <ShieldCheck className="size-4 text-primary" />
