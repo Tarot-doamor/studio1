@@ -264,7 +264,7 @@ export default function LandingPage() {
                     <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> 10 Legendas</li>
                     <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Garantia de 7 dias</li>
                   </ul>
-                  <Button variant="outline" className="w-full">Quero essa opção!</Button>
+                  <Button className="w-full">Quero essa opção!</Button>
                 </CardContent>
               </Card>
 
