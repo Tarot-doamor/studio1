@@ -208,7 +208,7 @@ export default function LandingPage() {
                     <StepIcon>
                       <div className="flex items-center justify-center gap-1">
                         <Mail className="size-10" />
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M16.75 13.96c.25.25.25.66 0 .91l-1.68 1.68c-.25.25-.66.25-.91 0l-.57-.57c-.25-.25-.25-.66 0-.91l.57-.57c1.09-1.09 2.05-2.05 2.59-2.59.25-.25.66-.25.91 0l.08.08c.25.25.25.66 0 .91l-1 1zm-3.11-3.11c-.25-.25-.66-.25-.91 0l-1.68 1.68c-.25.25-.25.66 0 .91l.57.57c.25.25.66.25.91 0l.57-.57c1.09-1.09 2.05-2.05 2.59-2.59.25-.25.66-.25.91 0l.08.08c.25.25.25.66 0 .91l-1 1c-1.28 1.28-2.32 2.32-3.18 3.18-.25.25-.66.25-.91 0l-1.68-1.68c-.25-.25-.25-.66 0-.91l.57-.57c.25-.25.66-.25.91 0l.57.57c.54-.54 1.5-1.5 2.59-2.59zM12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>
+                        <Image src="https://i.postimg.cc/zXN6pW62/whatsapp-icon.png" alt="WhatsApp Icon" width={40} height={40} />
                       </div>
                     </StepIcon>
                    </div>
@@ -216,7 +216,7 @@ export default function LandingPage() {
                        <StepIcon>
                          <div className="flex items-center justify-center gap-1">
                            <Mail className="size-10" />
-                           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M16.75 13.96c.25.25.25.66 0 .91l-1.68 1.68c-.25.25-.66.25-.91 0l-.57-.57c-.25-.25-.25-.66 0-.91l.57-.57c1.09-1.09 2.05-2.05 2.59-2.59.25-.25.66-.25.91 0l.08.08c.25.25.25.66 0 .91l-1 1zm-3.11-3.11c-.25-.25-.66-.25-.91 0l-1.68 1.68c-.25.25-.25.66 0 .91l.57.57c.25.25.66.25.91 0l.57-.57c1.09-1.09 2.05-2.05 2.59-2.59.25-.25.66-.25.91 0l.08.08c.25.25.25.66 0 .91l-1 1c-1.28 1.28-2.32 2.32-3.18 3.18-.25.25-.66.25-.91 0l-1.68-1.68c-.25-.25-.25-.66 0-.91l.57-.57c.25-.25.66-.25.91 0l.57.57c.54-.54 1.5-1.5 2.59-2.59zM12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/></svg>
+                           <Image src="https://i.postimg.cc/zXN6pW62/whatsapp-icon.png" alt="WhatsApp Icon" width={40} height={40} />
                          </div>
                        </StepIcon>
                    </div>
