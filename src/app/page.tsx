@@ -238,7 +238,7 @@ export default function LandingPage() {
               <div className="relative z-10 flex w-full flex-col items-center gap-6 md:flex-row">
                 <div className="flex justify-center md:w-1/2 md:justify-end md:pr-12">
                   <HowItWorksIcon>
-                    <FileText className="size-10" />
+                    <Image src="https://i.postimg.cc/kGD9rcvt/20834726-planos-icone-vetor-removebg-preview.png" alt="Plans icon" width={60} height={60} data-ai-hint="plans icon" />
                   </HowItWorksIcon>
                 </div>
                 <div className="text-center md:w-1/2 md:pl-12 md:text-left">
@@ -509,8 +509,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
-
-    
-
