@@ -209,7 +209,7 @@ export default function LandingPage() {
         {/* Bonus Section */}
         <section className="bg-secondary/50 py-16 md:py-24">
           <div className="container text-center">
-             <h2 className="text-3xl font-bold md:text-4xl">E ainda tem <span className="text-primary">6 Bônus Exclusivos!</span></h2>
+             <h2 className="text-3xl font-bold md:text-4xl">E ainda tem <span className="text-yellow-500">6 Bônus Exclusivos!</span></h2>
              <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">Comprando hoje, você leva de graça tudo que precisa para gerenciar e crescer seu negócio.</p>
              <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               <div className="rounded-lg border bg-background/50 p-6">
