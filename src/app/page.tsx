@@ -31,7 +31,7 @@ export default function LandingPage() {
         <section className="bg-background py-16 text-center md:py-24">
           <div className="container">
             <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl">
-              <span className="text-primary">+300 Mídias</span> Profissionais para sua Salgaderia Vender Mais
+              <span className="text-yellow-500">+300 Mídias</span> Profissionais para sua Salgaderia Vender Mais
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground md:text-xl">
               Chega de passar horas criando posts! Com nosso pacote, você terá artes prontas e editáveis para transformar suas redes sociais em uma máquina de vendas.
