@@ -1,12 +1,13 @@
 
 'use client';
 
-import { CheckCircle, ShieldCheck, Star, ChevronRight, Award, Tv, Users, Clock, ShoppingCart, MessageCircle, FileText, BarChart2 } from 'lucide-react';
+import { CheckCircle, ShieldCheck, Star, Award, Tv, Users, FileText, BarChart2, MessageCircle, ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Badge } from '@/components/ui/badge';
 
 export default function LandingPage() {
   return (
@@ -47,7 +48,7 @@ export default function LandingPage() {
               Quero Aumentar Minhas Vendas
             </Button>
             <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <ShieldCheck className="size-4 text-green-500" />
+              <ShieldCheck className="size-4 text-primary" />
               <span>Compra Segura | Acesso Imediato</span>
             </div>
           </div>
@@ -170,21 +171,56 @@ export default function LandingPage() {
         </section>
 
 
-        {/* Call to Action Price Section */}
+        {/* Plans Section */}
         <section className="bg-secondary/50 py-16 md:py-24">
-          <div className="container max-w-4xl rounded-xl bg-background p-8 text-center shadow-2xl shadow-primary/20">
-            <h3 className="font-bold uppercase text-muted-foreground">OFERTA ESPECIAL POR TEMPO LIMITADO</h3>
-            <p className="mt-4 text-2xl text-muted-foreground">De <span className="line-through">R$197,00</span> por apenas:</p>
-            <p className="my-4 text-7xl font-extrabold text-primary">R$27</p>
-            <Button size="lg" className="mt-4 w-full max-w-md animate-pulse py-8 text-2xl font-bold uppercase">
-              Sim! Quero o pacote completo agora!
-            </Button>
-            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <ShieldCheck className="size-4 text-green-500" />
-              <span>Compra Segura | Acesso Imediato via E-mail e WhatsApp</span>
+          <div className="container">
+            <h2 className="text-center text-3xl font-bold md:text-4xl">Escolha a Melhor Oferta Para Você</h2>
+            <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 md:items-start lg:gap-12">
+              {/* Pacote Básico */}
+              <Card className="bg-background/70">
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl font-bold">Pacote Básico</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col items-center">
+                  <p className="my-4 text-4xl font-extrabold text-primary">R$10</p>
+                  <ul className="my-6 space-y-3 text-muted-foreground">
+                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> 10 Posts Prontos</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> 5 Stories</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> 10 Legendas</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Garantia de 7 dias</li>
+                  </ul>
+                  <Button variant="outline" className="w-full">Quero essa opção!</Button>
+                </CardContent>
+              </Card>
+
+              {/* Pacote Completo */}
+              <Card className="relative border-2 border-primary bg-background shadow-2xl shadow-primary/20">
+                <Badge variant="default" className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary px-4 py-1 text-base font-bold">Mais Vendido</Badge>
+                <CardHeader className="text-center">
+                  <CardTitle className="text-2xl font-bold">Pacote Completo</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col items-center">
+                  <p className="text-2xl text-muted-foreground">De <span className="line-through">R$197,00</span> por apenas:</p>
+                  <p className="my-4 text-5xl font-extrabold text-primary">R$27</p>
+                  <ul className="my-6 space-y-3 text-muted-foreground">
+                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> <strong>+200 Posts Prontos</strong></li>
+                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> <strong>+100 Stories Engajadores</strong></li>
+                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Legendas para todos os posts</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Destaques para Bio</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Modelos de Placa PIX</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> <strong>6 Bônus Exclusivos</strong></li>
+                     <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Bônus Surpresa</li>
+                    <li className="flex items-center gap-2"><CheckCircle className="size-5 text-primary" /> Garantia de 7 dias</li>
+                  </ul>
+                  <Button size="lg" className="w-full animate-pulse py-8 text-2xl font-bold uppercase">
+                    SIM! Quero essa super oferta
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
+
 
         {/* Testimonials Section */}
         <section className="py-16 md:py-24">
