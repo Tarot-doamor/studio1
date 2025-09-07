@@ -116,7 +116,7 @@ export default function LandingPage() {
                 <h3 className="mt-4 text-xl font-bold text-red-500 uppercase">Economia de Tempo</h3>
               </div>
               <div className="flex flex-col items-center">
-                <Image src="https://i.postimg.cc/8cMMPcgs/money-bag-1f4b0.png" alt="Saco de Dinheiro" width={128} height={128} data-ai-hint="money bag" />
+                <Image src="https://i.postimg.cc/mkfB7Rym/criativo-65889b64d59b6-Mj-Qv-MTIv-Mj-Ay-My-Ax-N2g1-OA-removebg-preview.png" alt="Saco de Dinheiro" width={128} height={128} data-ai-hint="money bag" />
                 <h3 className="mt-4 text-xl font-bold text-red-500 uppercase">Aumento nas Vendas</h3>
               </div>
             </div>
