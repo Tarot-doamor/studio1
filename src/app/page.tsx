@@ -229,7 +229,7 @@ export default function LandingPage() {
                  </div>
                  <div className="flex justify-center md:w-1/2 md:justify-start md:pl-12">
                    <HowItWorksIcon>
-                     <HelpCircle className="size-10" />
+                    <Image src="https://i.postimg.cc/tJ2vpNJF/9569863-removebg-preview.png" alt="Website icon" width={60} height={60} data-ai-hint="website icon" />
                    </HowItWorksIcon>
                  </div>
                </div>
@@ -512,5 +512,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
