@@ -1,7 +1,7 @@
 
 'use client';
 
-import { CheckCircle, ShieldCheck, Star, Award, Tv, Users, FileText, BarChart2, MessageCircle, ShoppingCart } from 'lucide-react';
+import { CheckCircle, ShieldCheck, Star, Award, Tv, Users, FileText, BarChart2, MessageCircle, ShoppingCart, Volume2, VolumeX } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import Autoplay from "embla-carousel-autoplay";
 import * as React from 'react';
+import { Progress } from '@/components/ui/progress';
 
 const HowItWorksIcon = ({ children }: { children: React.ReactNode }) => (
   <div className="relative flex size-20 items-center justify-center rounded-full bg-black/10 text-primary">
@@ -24,6 +25,26 @@ export default function LandingPage() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
+
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = React.useState(true);
+  const [progress, setProgress] = React.useState(0);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
+    }
+  };
+
+  const handleTimeUpdate = () => {
+    if (videoRef.current) {
+      const currentProgress = (videoRef.current.currentTime / videoRef.current.duration) * 100;
+      setProgress(currentProgress);
+    }
+  };
+
+
   return (
     <div className="flex w-full flex-col bg-background text-foreground">
       <main className="flex-1">
@@ -42,7 +63,27 @@ export default function LandingPage() {
               Chega de passar horas criando posts! Com nosso pacote, você terá artes prontas e editáveis para transformar suas redes sociais em uma máquina de vendas.
             </p>
             <div className="mt-8 flex justify-center">
-              <Image src="https://i.postimg.cc/7LqqyCQG/hero-salgadaria-DG27qde-U.jpg" data-ai-hint="food social media" alt="Exemplo de Post de Salgadaria" width={1080} height={1080} className="w-full max-w-sm rounded-lg shadow-2xl" />
+              <div className="relative w-full max-w-sm rounded-lg shadow-2xl overflow-hidden">
+                <video
+                  ref={videoRef}
+                  src="https://cdn-cf-east.streamable.com/video/mp4/fjv85l.mp4?Expires=1719177300&Key-Pair-Id=K13L6A4K383M36&Signature=bW13s6uE4L~rWb~eYy~4C75v88BwG8k~m8sYmG2~z68bK8fN8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~e-mail"
+                  className="w-full"
+                  autoPlay
+                  loop
+                  muted={isMuted}
+                  playsInline
+                  onTimeUpdate={handleTimeUpdate}
+                />
+                <button
+                  onClick={toggleMute}
+                  className="absolute bottom-4 right-4 bg-black/50 text-white p-2 rounded-full"
+                >
+                  {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+                </button>
+                <div className="absolute bottom-0 left-0 w-full h-1">
+                   <Progress value={progress} className="h-full w-full" />
+                </div>
+              </div>
             </div>
             <a href="#oferta-principal">
               <Button size="lg" className="mt-8 w-full max-w-sm animate-pulse px-6 py-6 text-lg font-bold uppercase">
@@ -451,3 +492,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
