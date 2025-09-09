@@ -66,7 +66,7 @@ export default function LandingPage() {
               <div className="relative w-full max-w-sm rounded-lg shadow-2xl overflow-hidden aspect-[9/16]">
                 <video
                   ref={videoRef}
-                  src="https://file.io/E5A8fT3kYf1d/video.mp4"
+                  src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
                   className="w-full h-full object-cover"
                   autoPlay
                   loop
@@ -492,3 +492,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
+    
