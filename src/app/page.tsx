@@ -45,39 +45,19 @@ export default function LandingPage() {
               Chega de passar horas criando posts! Com nosso pacote, você terá artes prontas e editáveis para transformar suas redes sociais em uma máquina de vendas.
             </p>
             <div className="mt-8 flex justify-center">
-              <div className="w-full max-w-sm">
-                <Script src="https://fast.wistia.com/embed/juf9nt0lsy.js" async type="module"></Script>
-                <div
-                  className="wistia_embed wistia_async_juf9nt0lsy"
-                  style={{ height: '100%', position: 'relative', width: '100%' }}
-                >
-                  <div
-                    className="wistia_swatch"
-                    style={{
-                      height: '100%',
-                      left: 0,
-                      opacity: 0,
-                      overflow: 'hidden',
-                      position: 'absolute',
-                      top: 0,
-                      transition: 'opacity 200ms',
-                      width: '100%',
-                    }}
-                  >
-                    <img
-                      src="https://fast.wistia.com/embed/medias/juf9nt0lsy/swatch"
-                      style={{
-                        filter: 'blur(5px)',
-                        height: '100%',
-                        objectFit: 'contain',
-                        width: '100%',
-                      }}
-                      alt=""
-                      aria-hidden="true"
-                    />
-                  </div>
+                <div className="w-full max-w-sm">
+                    <Script src="https://fast.wistia.com/embed/medias/juf9nt0lsy.jsonp" async />
+                    <Script src="https://fast.wistia.com/assets/external/E-v1.js" async />
+                    <div className="wistia_responsive_padding" style={{padding: "177.78% 0 0 0", position: "relative"}}>
+                        <div className="wistia_responsive_wrapper" style={{height: "100%", left: 0, position: "absolute", top: 0, width: "100%"}}>
+                            <div className="wistia_embed wistia_async_juf9nt0lsy videoFoam=true" style={{height: "100%", position: "relative", width: "100%"}}>
+                                <div className="wistia_swatch" style={{height: "100%", left: 0, opacity: 0, overflow: "hidden", position: "absolute", top: 0, transition: "opacity 200ms", width: "100%"}}>
+                                    <img src="https://fast.wistia.com/embed/medias/juf9nt0lsy/swatch" style={{filter: "blur(5px)", height: "100%", objectFit: "contain", width: "100%"}} alt="" aria-hidden="true" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
             <a href="#oferta-principal">
               <Button size="lg" className="mt-8 w-full max-w-sm animate-pulse px-6 py-6 text-lg font-bold uppercase">
@@ -486,7 +466,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
-
-    
