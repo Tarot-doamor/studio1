@@ -63,11 +63,11 @@ export default function LandingPage() {
               Chega de passar horas criando posts! Com nosso pacote, você terá artes prontas e editáveis para transformar suas redes sociais em uma máquina de vendas.
             </p>
             <div className="mt-8 flex justify-center">
-              <div className="relative w-full max-w-sm rounded-lg shadow-2xl overflow-hidden">
+              <div className="relative w-full max-w-sm rounded-lg shadow-2xl overflow-hidden aspect-[9/16]">
                 <video
                   ref={videoRef}
                   src="https://file.io/E5A8fT3kYf1d/video.mp4"
-                  className="w-full"
+                  className="w-full h-full object-cover"
                   autoPlay
                   loop
                   muted={isMuted}
