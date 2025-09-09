@@ -11,6 +11,7 @@ import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carouse
 import Autoplay from "embla-carousel-autoplay";
 import * as React from 'react';
 import { Progress } from '@/components/ui/progress';
+import Script from 'next/script';
 
 const HowItWorksIcon = ({ children }: { children: React.ReactNode }) => (
   <div className="relative flex size-20 items-center justify-center rounded-full bg-black/10 text-primary">
@@ -25,25 +26,6 @@ export default function LandingPage() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
-
-  const videoRef = React.useRef<HTMLVideoElement>(null);
-  const [isMuted, setIsMuted] = React.useState(true);
-  const [progress, setProgress] = React.useState(0);
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(videoRef.current.muted);
-    }
-  };
-
-  const handleTimeUpdate = () => {
-    if (videoRef.current) {
-      const currentProgress = (videoRef.current.currentTime / videoRef.current.duration) * 100;
-      setProgress(currentProgress);
-    }
-  };
-
 
   return (
     <div className="flex w-full flex-col bg-background text-foreground">
@@ -63,25 +45,37 @@ export default function LandingPage() {
               Chega de passar horas criando posts! Com nosso pacote, você terá artes prontas e editáveis para transformar suas redes sociais em uma máquina de vendas.
             </p>
             <div className="mt-8 flex justify-center">
-              <div className="relative w-full max-w-sm rounded-lg shadow-2xl overflow-hidden aspect-[9/16]">
-                <video
-                  ref={videoRef}
-                  src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
-                  className="w-full h-full object-cover"
-                  autoPlay
-                  loop
-                  muted={isMuted}
-                  playsInline
-                  onTimeUpdate={handleTimeUpdate}
-                />
-                <button
-                  onClick={toggleMute}
-                  className="absolute bottom-4 right-4 bg-black/50 text-white p-2 rounded-full"
+              <div className="w-full max-w-sm">
+                <Script src="https://fast.wistia.com/embed/juf9nt0lsy.js" async type="module"></Script>
+                <div
+                  className="wistia_embed wistia_async_juf9nt0lsy"
+                  style={{ height: '100%', position: 'relative', width: '100%' }}
                 >
-                  {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-                </button>
-                <div className="absolute bottom-0 left-0 w-full h-1">
-                   <Progress value={progress} className="h-full w-full bg-transparent" innerClassName="bg-primary" />
+                  <div
+                    className="wistia_swatch"
+                    style={{
+                      height: '100%',
+                      left: 0,
+                      opacity: 0,
+                      overflow: 'hidden',
+                      position: 'absolute',
+                      top: 0,
+                      transition: 'opacity 200ms',
+                      width: '100%',
+                    }}
+                  >
+                    <img
+                      src="https://fast.wistia.com/embed/medias/juf9nt0lsy/swatch"
+                      style={{
+                        filter: 'blur(5px)',
+                        height: '100%',
+                        objectFit: 'contain',
+                        width: '100%',
+                      }}
+                      alt=""
+                      aria-hidden="true"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

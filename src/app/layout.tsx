@@ -18,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="dark">
+      <head>
+        <script src="https://fast.wistia.com/player.js" async></script>
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
         <Toaster />
