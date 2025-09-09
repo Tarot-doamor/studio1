@@ -66,7 +66,7 @@ export default function LandingPage() {
               <div className="relative w-full max-w-sm rounded-lg shadow-2xl overflow-hidden">
                 <video
                   ref={videoRef}
-                  src="https://file.io/3VzS6T6cWbBq"
+                  src="https://file.io/E5A8fT3kYf1d/video.mp4"
                   className="w-full"
                   autoPlay
                   loop
@@ -492,5 +492,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
