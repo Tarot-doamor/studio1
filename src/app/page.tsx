@@ -66,7 +66,7 @@ export default function LandingPage() {
               <div className="relative w-full max-w-sm rounded-lg shadow-2xl overflow-hidden">
                 <video
                   ref={videoRef}
-                  src="https://cdn-cf-east.streamable.com/video/mp4/fjv85l.mp4?Expires=1719177300&Key-Pair-Id=K13L6A4K383M36&Signature=bW13s6uE4L~rWb~eYy~4C75v88BwG8k~m8sYmG2~z68bK8fN8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~8f~e-mail"
+                  src="https://cdn.streamable.com/video/mp4/fjv85l.mp4"
                   className="w-full"
                   autoPlay
                   loop
@@ -81,7 +81,7 @@ export default function LandingPage() {
                   {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
                 </button>
                 <div className="absolute bottom-0 left-0 w-full h-1">
-                   <Progress value={progress} className="h-full w-full" />
+                   <Progress value={progress} className="h-full w-full bg-transparent" innerClassName="bg-primary" />
                 </div>
               </div>
             </div>
@@ -492,5 +492,3 @@ export default function LandingPage() {
     </div>
   );
 }
-
-    
